@@ -13,11 +13,11 @@
               <div class="card">
                 <img class="card-img-top blog-thumbnail" src="{{blog.image.url}}" alt="Card image cap" />
                   <div class="card-body">
-                    <h5 class="card-title"> {{ blog.title }}</h5>
+                    <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
                     <p class="card-text"> {{ blog.summary }}</p>
                   </div>
-                <div class="card-footer">
-                  <small class="text-muted">{{blog.created_on}}</small>
+                <div class="card-footer blog-button">
+                  <small class="text-muted">{{blog.created_on}}</small><a href="{% url 'post_details' blog.id %}" class="btn btn-primary">Read More</a>
                 </div>
               </div>
           </div>

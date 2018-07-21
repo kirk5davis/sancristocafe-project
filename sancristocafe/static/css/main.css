@@ -220,6 +220,11 @@ display: flex;
 justify-content: center;
 }
 
+.blog-button{
+  display: inline-flex;
+  justify-content: space-between;
+}
+
 .contact-us{
  background-image: url('/static/images/green_coffee.jpg');
  background-attachment: fixed;

@@ -10,6 +10,7 @@ $(window).on('resize',function(){
 	$('.header-of-site').height($(window).height())
 });
 
+//animate the home page
 $(".navbar a").click(function(){
   $("body,html").animate({
    scrollTop:$("#" + $(this).data('value')).offset().top
