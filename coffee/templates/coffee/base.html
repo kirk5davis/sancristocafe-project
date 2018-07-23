@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="height:100%;">
 
 <head>
     {% load staticfiles %}
@@ -12,6 +12,12 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+
     <!-- Custom style sheets -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 
@@ -21,11 +27,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- leaflet javascript -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+   crossorigin=""></script>
     
     <script type="text/javascript" src='{% static "js/main.js"%}''></script>
 
 </head>
 <body>
+  
 
     <!-- header home page section -->
 
@@ -37,23 +49,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup" role='navigation'>
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="">about us</a>
-        <a class="nav-item nav-link" href="">our coffees</a>
-        <a class="nav-item nav-link" href="">source work</a>
+        <a class="nav-item nav-link" href="{% url 'about' %}">about us</a>
+        <a class="nav-item nav-link" href="{% url 'coffees' %}">our coffees</a>
+        <a class="nav-item nav-link" href="{% url 'source-work' %}">source work</a>
         <a class="nav-item nav-link" href="{%url 'blog'%}">news/blog</a>
-        <a class="nav-item nav-link" href="">contact</a>
+        <a class="nav-item nav-link" href="http://www.trackyourcoffee.com">track-your-coffee</a>
+        <a class="nav-item nav-link" href="{%url 'contact'%}">contact</a>
       </div>
     </div>
   </nav>
     </header>
-
-    <main role="main">
+    <main role="main" class="site-content">
     {% block content %}
     {% endblock %}
-    </main>
-    <footer class="text-center bg-dark" style="align-items: center;position:block; bottom:0;width:100%;height:45px;">
+  </main>
+  <footer class="text-center bg-dark">
     <div class="container" style="align-items: center;">
-      <p style="color:white;align-items: center;">&#9400; San Cristobal Coffee Importers {% now "Y" %}</p>
+      <p style="color:white;align-items: center;">&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class='text-muted'><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034  ||  425-825-9106</strong></small></p>
+      
     </div>
   </footer>
 </body>

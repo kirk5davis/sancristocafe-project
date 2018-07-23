@@ -6,9 +6,9 @@
         <section class="jumbotron text-center">
           <div class="container">
             <h1 class="jumbotron-heading">San Cristobal Coffee Importers</h1>
-            <h4 class="lead text-muted">Exclusive Worldwide Distributor of Internet Traceable Mexican Coffee from <a href="http://www.gtnay.com/"><b>Grupo Terru&ntildeo Nayarita</h4>
+            <h4 class="text-muted">Exclusive Worldwide Distributor of Internet Traceable Mexican Coffee from <a href="http://www.gtnay.com/"><strong>Grupo Terru&ntildeo Nayarita</strong></h4>
             <p>
-              <a href="mailto:kirk5davis@gmail.com" class="btn btn-primary my-2">Email us</a>
+              <a href="{%url 'contact'%}" class="btn btn-primary my-2">Contact Us</a>
             </p>
           </div>
         </section>
@@ -39,7 +39,7 @@
                      several containers.
                  </p>
                  <p>
-                <a href="" class="btn btn-primary my-2">Learn more about us</a>
+                <a href="{% url 'about' %}" class="btn btn-primary my-2">Learn more about us</a>
             </p>
             </div>
           </div>
@@ -49,25 +49,53 @@
 
 
     <!-- our coffees section -->
-    <div class="album py-5 bg-light coffee">
+    <div class="coffee">
       <h1 class="text-center">Our Coffees</h1>
         <div class="container">
 
-          <div class="row">
-
+          <div class="row" style="display:block">
+            
+              <div class="accordion mb-5" id="accordionExample">
             {% for coffee in coffees.all %}
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src='{{ coffee.image.url }}' max-height='200px'/>
-                <div class="card-body">
-                  <p class="card-text"> {{ coffee.coffee_name }}</p>
+                  <div class="card">
+                    <div class="card-header card-header-color" id="heading{{coffee.id}}">
+                      <h5 class="mb-1">
+                        <button class="btn btn-link btn-block collasped nounderline" type="button" data-toggle="collapse" data-target="#collapse{{coffee.id}}" aria-expanded="true" aria-controls="collapse{{coffee.id}}">
+                         <h4 class="mb-1 accordian-headers">{{coffee.coffee_name}}</h4><small class="text-muted">{{coffee.origin}}</small>
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="collapse{{coffee.id}}" class="collapse" aria-labelledby="heading{{coffee.id}}" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class='table-responsive'>
+                        <table class="table table-sm">
+                          <thead>
+                            <th scope="col"></th>
+                            <th scope="col">Origin</th>
+                            <th scope="col">Origin Info</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Availability</th>
+                          </thead>
+                          <tbody>
+
+                          <tr>
+                            <td><img src="{{coffee.image.url}}" class="blog-thumbnail" /></td>
+                            <td>{{coffee.origin}}</td>
+                            <td>{{coffee.origin_info}}</td>
+                            <td>{{coffee.description}}</td>
+                            <td>{{coffee.availability}}</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
               {% endfor %}
-
+              </div>
           </div>
         </div>
     </div>
@@ -76,24 +104,24 @@
     <!-- blog/new section -->
     <!-- Posts section -->
     <div class="blog">
-      <h1 class="text-center">Blogs/News</h1>
+      <h1 class="text-center">News/Blog</h1>
         <div class="container">
           <div class="card-deck">
             {% for blog in blogs %}
               <div class="card">
                 <img class="card-img-top blog-thumbnail" src="{{blog.image.url}}" alt="Card image cap" />
                   <div class="card-body">
-                    <h5 class="card-title"> {{ blog.title }}</h5>
+                    <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
                     <p class="card-text"> {{ blog.summary }}</p>
                   </div>
-                <div class="card-footer">
-                  <small class="text-muted">{{blog.created_on}}</small>
+                <div class="card-footer blog-button">
+                  <small class="text-muted">{{blog.created_on}}</small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
                 </div>
               </div>
               {% endfor %}
           </div>
           
-          <p><a href="" class="btn btn-primary my-4">See all news</a></p>
+          <p><a href="{% url 'blog' %}" class="btn btn-primary my-4">See all news</a></p>
           </div>       
     </div>
         <!-- end of news/blog section -->
@@ -103,25 +131,19 @@
     <div class="contact-us">
       <h1 class="text-center">Contact Us</h1>
      <div class="container">
-      <form> 
-        <div class="row centered-contact-form">
-           <div class="form-group">
-             <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
-           </div>
-           <div class="form-group">
-             <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
-           </div>
-           <div class="form-group">
-             <textarea class="form-control form-control-lg">
-
-             </textarea>
-           </div>
-           <input type="submit" class="btn btn-primary btn-block" value="Send" name="">
+      <div class="row text-center">
+        <div class="col-lg-4"><h4>By Phone</h4>
+          <h2><strong>425-825-9106</strong></h2>
         </div>
-
-      </form>
-     </div>
+        <div class="col-lg-4"><h4>By Mail</h4>
+            <p><strong>13244 Juanita Drive NE</strong><br> Kirkland, Washington<br> 98034</p>
+        </div>
+        <div class="col-lg-4"><h4>Via our Contact Form</h4>
+        <a href="{%url 'contact'%}" class="btn btn-primary my-2">Contact Form</a>
+      </div>
+      </div>
     </div>
 
-</div>
+    </div>
+
 {% endblock %}

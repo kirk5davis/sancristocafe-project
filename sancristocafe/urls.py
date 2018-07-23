@@ -9,5 +9,9 @@ import coffee.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', coffee.views.home, name='home'),
+    path('about/', coffee.views.about, name='about'),
+    path('coffees/', coffee.views.coffees, name='coffees'),
+    path('source-work/', coffee.views.source_work, name='source-work'),
     path('blog/', include('blog.urls'), name='blog'),
+    path('contact/', include('contact.urls'), name='contact'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
