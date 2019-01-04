@@ -6,7 +6,7 @@
         <section class="jumbotron text-center">
           <div class="container">
             <h1 class="jumbotron-heading">San Cristobal Coffee Importers</h1>
-            <h4 class="text-muted">Exclusive Worldwide Distributor of Internet Traceable Mexican Coffee from <a href="http://www.gtnay.com/"><strong>Grupo Terru&ntildeo Nayarita</strong></h4>
+              <h4 class="text-muted">Exclusive Worldwide Distributor of Internet Traceable Mexican Coffee from <a href="http://www.gtnay.com/"><strong>Grupo Terru&ntildeo Nayarita</strong></a></h4>
             <p>
               <a href="{%url 'contact'%}" class="btn btn-primary my-2">Contact Us</a>
             </p>
@@ -23,7 +23,7 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="{% static 'images/coffee_bean_outline.png' %}" class="img-fluid">
+                <img src="{% static 'images/coffee_bean_outline.png' %}" class="img-fluid" alt="coffee bean">
               </div>
             <div class="col-lg-8 col-md-8 col-sm-12 desc">
 
@@ -139,7 +139,7 @@
             <p><strong>13244 Juanita Drive NE</strong><br> Kirkland, Washington<br> 98034</p>
         </div>
         <div class="col-lg-4"><h4>Via our Contact Form</h4>
-        <a href="{%url 'contact'%}" class="btn btn-primary my-2">Contact Form</a>
+        <a href="{% url 'contact' %}" class="btn btn-primary my-2">Contact Form</a>
       </div>
       </div>
     </div>
