@@ -28,7 +28,7 @@ media
 # Distribution / packaging
 .Python
 build/
-develop-eggs/
+develop-eggs/ x
 dist/
 downloads/
 eggs/

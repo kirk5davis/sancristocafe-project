@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>San Cristobal Coffee Importers</title>
 
     <!-- Bootstrap core CSS -->
@@ -21,6 +22,8 @@
 
     <!-- Custom style sheets -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/picture_animations.css'%}">
+
 
     <!-- Font style for this website -->
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRoboto+Slab" rel="stylesheet">
@@ -38,6 +41,8 @@
     <!-- Custom JS -->
     <script type="text/javascript" src='{% static "js/main.js"%}'></script>
 
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/ico" />
+
 </head>
 <body>
   
@@ -45,13 +50,13 @@
     <!-- header home page section -->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark py-3">
           <a href="#" class="navbar-left"><img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"> </a><a class="navbar-brand " href="{% url 'home' %}">San Cristobal Coffee Importers</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup" role='navigation'>
-      <div class="navbar-nav ml-auto">
+      <div class="navbar-nav">
         <a class="nav-item nav-link" href="{% url 'about' %}">about us</a>
         <a class="nav-item nav-link" href="{% url 'coffees' %}">our coffees</a>
         <a class="nav-item nav-link" href="{% url 'source-work' %}">source work</a>
@@ -62,14 +67,13 @@
     </div>
   </nav>
     </header>
-    <main role="main" class="site-content">
+    <main role="main">
     {% block content %}
     {% endblock %}
   </main>
-  <footer class="text-center bg-dark">
-    <div class="container" style="align-items: center;">
-      <p style="color:white;align-items: center;">&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class='text-muted'><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034  ||  425-825-9106</strong></small></p>
-      
+  <footer class="footer">
+    <div class="container pt-2 text-center">
+      <p>&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class="text-muted"><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034  ||  425-825-9106</strong></small></p>
     </div>
   </footer>
 </body>
