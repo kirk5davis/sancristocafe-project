@@ -9,7 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-
 /*
 body{
   font-family: 'Roboto Slab', serif;
@@ -22,12 +21,12 @@ body{
 
 body {
 font-family: 'Roboto Slab', serif;
-  display: flex;
+  display: block;
   flex-direction: column;
   margin-bottom: 60px;
   position: relative;
   margin: 0;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   min-height: 100%;
 }
 
@@ -49,21 +48,25 @@ font-weight:bold;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  background-color: #f5f5f5;
+  background-color: #333333;
 }
 
+.footer p {
+    color: #f4f4f4;
+}
 
 .badge{
   display:inline-table;
 }
 
 .navbar{
- background:#F97300;
+ background:#333333;
 }
 
 .navbar-left img{
     height:30px;
     width:auto;
+    padding-right: 8px;
 }
 
 
@@ -103,6 +106,7 @@ width=auto;
  justify-content:center;
  align-items:center;
  display:flex;
+
 }
 
 .jumbotron{
@@ -334,7 +338,6 @@ color:#ad7b00;
  background-attachment: fixed;
  background-size: cover;
  background-position: center;
- margin: 4em 0;
  position: relative;
   padding: 1em;
  background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/coffee_warehouse.jpg');
@@ -370,4 +373,5 @@ color:#ad7b00;
 .breadcrumb-bean{
   height: 20px;
   width:auto;
+}
 }
