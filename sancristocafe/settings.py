@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'coffee.apps.CoffeeConfig',
     'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SUMMERNOTE_CONFIG = {
+    'iframe':True,
+}
+
+SUMMERNOTE_THEME = 'bs4'  # bootstrap 4 summernote theme
 
 try:
     from .local_settings import *
