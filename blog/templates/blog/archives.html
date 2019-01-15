@@ -1,0 +1,99 @@
+{% extends 'coffee/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="blog">
+<div class="container">
+		<h1 class="text-center pt-3">Archived Newletters and Documents</h1>
+		<hr />
+		<h3><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  <a href="{% url 'news' %}"">News</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Archives</h3>
+		<hr />
+		<div>
+			<div>
+			<img src="{% static 'images/archives.png' %}" style="width:100%;"/>
+			<div class="text-center" style="position: absolute; top: 50%;left: 50%; transform: translate(-50%, -50%);">
+				<h1 style="font-size: 7vw;   text-shadow: 5px 5px 10px white, 0 0 25px white, 0 0 5px white; ">The Archives</h1>
+			</div>
+				</div>
+
+		</div>
+	<p><strong>Explore historical write-ups and thought provoking articles, still relevant over 10 years later</strong></p>
+		<div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header card-header-color" id="heading1">
+                        <button class="btn btn-link btn-block collasped nounderline" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                          <h4 class="mb-1 accordian-headers">Archived Newsletters</h4>
+                        </button>
+                    </div>
+
+                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
+                      <div class="card-body">
+                      	<div class='table-responsive'>
+                        <table class="table table-sm">
+                          <thead>
+                            <th scope="col">Name</th>
+                            <th scope="col">Summary</th>
+                            <th scope="col">View Document</th>
+						  	<th scope="col">Download</th>
+                          </thead>
+                          <tbody>
+
+						  {% for newsletter in newsletters %}
+                          <tr>
+                            <td><strong>{{newsletter.title}}</strong></td>
+                            <td>{{newsletter.brief_summary}}</td>
+                            <td><a href="{% url 'archive_details' 'newsletter' newsletter.id  %}" class="btn btn-primary">Click to View</a></td>
+                            <td><a href="{{ newsletter.file.url }}" class="btn btn-primary" target="_blank">Click to Download</a></td>
+                          </tr>
+						  {% endfor %}
+                          </tbody>
+                        </table>
+		</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header card-header-color" id="heading2">
+                        <button class="btn btn-link btn-block collasped nounderline" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                          <h4 class="mb-1 accordian-headers">Archived Documents</h4>
+                        </button>
+                    </div>
+
+                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+                      <div class="card-body">
+						  <div class='table-responsive'>
+                        <table class="table table-sm">
+                          <thead>
+                            <th scope="col">Name</th>
+                            <th scope="col">Summary</th>
+                            <th scope="col">View Document</th>
+						  	<th scope="col">Download</th>
+                          </thead>
+                          <tbody>
+
+						  {% for doc in archived_files %}
+                          <tr>
+                              <td><strong>{{doc.title}}</strong></td>
+                            <td>{{doc.brief_summary}}</td>
+                              {% if '.pdf' in doc.file.url %}
+                            <td><a href="{% url 'archive_details' 'document' doc.id  %}" class="btn btn-primary">Click to View</a></td>
+                              {% else %}
+                              <td>n/a</td>
+                              {% endif %}
+                            <td><a href="{{ doc.file.url }}" class="btn btn-primary" target="_blank">Click to Download</a></td>
+                          </tr>
+						  {% endfor %}
+                          </tbody>
+                        </table>
+					</div>
+                    </div>
+                  </div>
+                </div>
+		</div>
+	</div>
+
+</div>
+<br>
+<br>
+{% endblock %}

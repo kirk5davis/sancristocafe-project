@@ -4,11 +4,16 @@
 {% block content %}
 <div class="blog">
 <div class="container">
-	<h1 class="text-center pt-3">News/Blog</h1>
+	<h1 class="text-center pt-3">News</h1>
 	<hr />
-	<h3><a href="{% url 'home' %}"">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  News/Blog</h3>
+	<h3><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  News</h3>
 	<hr />
-	<h5 class="text-muted text-center"> - What's happening at San Cristobal - </h5>
+	<h5 class="text-muted text-center"> - See our latest newsletters and articles to find out what's happening at San Cristobal - </h5>
+    <p class="text-muted"></p>
+            <div class="btn-group d-flex" role="group">
+                <a href="{% url 'source-work' %}" class="btn btn-primary w-100">See our latest Newsletter</a>
+            </div>
+    <br>
 	          <div class="row">
             {% for blog in blogs %}
             <div class="col-sm-6 pt-2 card-group">
@@ -29,7 +34,14 @@
             <br />
           </div>
 
+
+            <div class="btn-group d-flex" role="group">
+                <a href="{% url 'archives' %}" class="btn btn-primary w-100">Check out the archives</a>
+            </div>
 </div>
+
 </div>
+<br>
+<br>
 
 {% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'coffee/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="blog">
+<div class="container">
+	<h1 class="text-center pt-3">Archive Document View</h1>
+	<hr />
+		<h3><a href="{% url 'home' %}">Home</a>
+			<img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />
+			<a href="{% url 'news' %}">News</a>
+			<img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />
+			<a href="{% url 'archives' %}">Archives </a>
+			<img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />
+			{{ archive_file.title }}
+
+
+		</h3>
+	<hr />
+
+	<div class="row">
+		<h5>{{ archive_file.title }}:  &nbsp</h5><h5 class="text-muted">  {{ archive_file.brief_summary }} </h5>
+		<div class="col-lg-12" id="pdf_area" style="height:100vh;">
+        	<script>PDFObject.embed("{{ archive_file.file.url }}", "#pdf_area");</script>
+		</div>
+    </div>
+	<br>
+	<div class="btn-group d-flex" role="group">
+            <a href="{% url 'archives' %}" class="btn btn-primary w-100">Go back to the archives</a>
+	</div>
+
+	</div>
+
+</div>
+</div>
+<br>
+{% endblock %}

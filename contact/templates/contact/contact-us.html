@@ -7,20 +7,52 @@
 	<hr />
 	<h3><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Contact Us</h3>
 	<hr />
-    	<div class="col-lg-12">
-    		<h2 class='text-center'><strong>Contact Form</strong></h2>
-		<p class='text-center'>Have any questions for us?  This form will shoot us an email and we'll reach out to you shortly.</p>
-		<form method="post" class="text-center">
-		    {% csrf_token %}
-		    {{ form.as_p }}
-		    <div class="form-actions">
-		      <button type="submit" class="btn btn-primary text-center">Send</button>
-		    </div>
-		    <br />
-		</form>
-	</div>
+		<div class="row align-items-center">
+    	<div class="col-lg-6 text-center">
+
+			<img src="{% static 'images/contact_us_phone.jpg' %}" class="img-responsive" height="auto" width="100%"/>
+		</div>
+		<div class="col-lg-6 text-center">
+			<br>
+			<h3>Have a question or specific need? Give us a ring!</h3>
+			<h1>(425) 825-9106</h1>
+			<br>
+			<h3>Or fill in the contact form and we'll respond as soon as we can. Thanks!</h3>
+
+		</div>
+		</div>
+	<div class="row justify-content-md-center">
+		<div class="col-lg-12 text-center">
+			<div class="accordion" id="accordionExample">
+					  <div class="card">
+						<div class="card-header card-header-color" id="heading1">
+							<button class="btn btn-link btn-block collasped nounderline" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+							  <h4 class="mb-1 accordian-headers">Click here for Contact Form</h4>
+							</button>
+						</div>
+
+						<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
+						  <div class="card-body
+">
+							<form method="post" class="text-center">
+								{% csrf_token %}
+								{{ form.as_p }}
+								<div class="form-actions">
+								  <button type="submit" class="btn btn-primary text-center">Send</button>
+								</div>
+								<br />
+							</form>
+							  <p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+		</div>
 
 
 	</div>
+	<br>
+	<br>
 
 {% endblock %}

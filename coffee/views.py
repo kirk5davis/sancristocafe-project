@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from .models import Coffee
 from blog.models import Blog
+from blog.models import Newsletter
 
 # Create your views here.
 def home(request):
@@ -17,4 +18,5 @@ def coffees(request):
 	return render(request, 'coffee/our_coffees.html',{"coffees":coffees})
 
 def source_work(request):
-	return render(request, 'coffee/source_work.html')
+	latest_newsletter = Newsletter.objects.all().order_by('-vintage')[0]
+	return render(request, 'coffee/source_work.html', {"newsletter":latest_newsletter})

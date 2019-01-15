@@ -104,7 +104,7 @@
     <!-- blog/new section -->
     <!-- Posts section -->
     <div class="blog">
-      <h1 class="text-center">News/Blog</h1>
+      <h1 class="text-center">News</h1>
         <div class="container">
           <div class="card-deck">
             {% for blog in blogs %}
@@ -121,7 +121,7 @@
               {% endfor %}
           </div>
           
-          <p><a href="{% url 'blog' %}" class="btn btn-primary my-4">See all news</a></p>
+          <p><a href="{% url 'news' %}" class="btn btn-primary my-4">See all news</a></p>
           </div>       
     </div>
         <!-- end of news/blog section -->

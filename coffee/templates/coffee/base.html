@@ -40,6 +40,9 @@
     <!-- Custom JS -->
     <script type="text/javascript" src='{% static "js/main.js"%}'></script>
 
+    <!-- PDF Object -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js" integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA=" crossorigin="anonymous"></script>
+
     <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/ico" />
 
 </head>
@@ -50,7 +53,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark py-3">
-          <a href="#" class="navbar-left"><img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"> </a><a class="navbar-brand " href="{% url 'home' %}">San Cristobal Coffee Importers</a>
+          <a href="#" class="navbar-left"><img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"></a><a class="navbar-brand" href="{% url 'home' %}">San Cristobal Coffee Importers</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,7 +62,7 @@
         <a class="nav-item nav-link" href="{% url 'about' %}">about us</a>
         <a class="nav-item nav-link" href="{% url 'coffees' %}">our coffees</a>
         <a class="nav-item nav-link" href="{% url 'source-work' %}">source work</a>
-        <a class="nav-item nav-link" href="{%url 'blog'%}">news/blog</a>
+        <a class="nav-item nav-link" href="{%url 'news'%}">news</a>
         <a class="nav-item nav-link" href="http://www.trackyourcoffee.com">track-your-coffee</a>
         <a class="nav-item nav-link" href="{%url 'contact'%}">contact</a>
       </div>
@@ -72,7 +75,7 @@
   </main>
   <footer class="footer">
     <div class="container pt-2 text-center">
-      <p>&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class="text-muted"><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034  ||  425-825-9106</strong></small></p>
+      <p>&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class="text-muted"><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034</strong></small></p>
     </div>
   </footer>
 </body>
