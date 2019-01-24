@@ -63,13 +63,14 @@ font-weight:bold;
 
 .navbar{
  background:#333333;
+ width: 100%;
+ position: fixed;
+ z-index: 1000;
 }
 
-#navbar{
-    width: 100%;
-    position: fixed;
- transition: top 0.3s; /* Transition effect when sliding down (and up) */
- }
+main {
+padding-top:60px;
+}
 
 .navbar-left img{
     height:30px;
