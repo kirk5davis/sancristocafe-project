@@ -65,6 +65,12 @@ font-weight:bold;
  background:#333333;
 }
 
+#navbar{
+    width: 100%;
+    position: fixed;
+ transition: top 0.3s; /* Transition effect when sliding down (and up) */
+ }
+
 .navbar-left img{
     height:30px;
     width:auto;

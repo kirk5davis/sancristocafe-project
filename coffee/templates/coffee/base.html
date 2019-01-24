@@ -52,7 +52,7 @@
     <!-- header home page section -->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top py-3" role="navigation">
           <a href="#" class="navbar-left"><img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"></a><a class="navbar-brand" href="{% url 'home' %}">San Cristobal Coffee Importers</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -69,9 +69,24 @@
     </div>
   </nav>
     </header>
-    <main role="main">
+    <div role="main" id="main">
+        {% if user.is_authenticated %}
     {% block content %}
     {% endblock %}
+        {% else %}
+        <div class="header-of-site">
+        <div class="jumbotron text-center">
+            <h1 style="font-size: 6vw;">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
+            <br>
+            <a href="http://www.sancristocafe.com" class="btn btn-primary">Click here to visit our existing website</a>
+            <br>
+            <br>
+            <h3>Or give us a call: </h3>
+            <br>
+            <h3 style="color:#ad7b00; font-size: 5vw;"><strong>(425) 825-9106</strong></h3>
+        </div>
+    </div>
+        {% endif %}
   </main>
   <footer class="footer">
     <div class="container pt-2 text-center">

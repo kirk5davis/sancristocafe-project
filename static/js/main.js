@@ -10,6 +10,21 @@ $(window).on('resize',function(){
 	$('.header-of-site').height($(window).height())
 });
 
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+    document.getElementById('main').style.top = '0'
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+    document.getElementById('main').style.margin-top = '-60px'
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
 // flipping the about us images
 $('.flip').hover(function(){
         $(this).find('.card').toggleClass('flipped');

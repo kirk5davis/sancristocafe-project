@@ -6,6 +6,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 import coffee.views
 
+admin.site.site_header = "San Cristobal Coffee Importers Website Administration Portal"
+admin.site.site_title = "San Cristobal Coffee Importers Web Administration"
+admin.site.index_title = "Welcome to San Cristobal Coffee Importers Website Admin Page"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
