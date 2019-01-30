@@ -1,97 +1,86 @@
 <!DOCTYPE HTML>
-<html lang="en" style="height:100%;">
+<html lang="en">
 
-<head>
-    {% load staticfiles %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-    <title>San Cristobal Coffee Importers</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
-    <!-- leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-   crossorigin=""/>
-
-    <!-- Custom style sheets -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+  <head>
+      {% load staticfiles %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
 
 
-    <!-- Font style for this website -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRoboto+Slab" rel="stylesheet">
+      <title>San Cristobal Coffee Importers</title>
 
-    <!-- Bootstrap JS and Jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-    <!-- leaflet javascript -->
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-   crossorigin=""></script>
+      <!-- Custom style sheets -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 
-    <!-- Custom JS -->
-    <script type="text/javascript" src='{% static "js/main.js"%}'></script>
+      <!-- Font style for this website -->
+      <link href="https://fonts.googleapis.com/css?family=Raleway%7CRoboto+Slab" rel="stylesheet">
 
-    <!-- PDF Object -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js" integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA=" crossorigin="anonymous"></script>
+      <!-- Bootstrap JS and Jquery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/ico" />
+      <!-- Custom JS -->
+      <script type="text/javascript" src='{% static "js/main.js"%}'></script>
 
-</head>
-<body>
-  
+      <!-- PDF Object -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js" integrity="sha256-rYPX3dXq8Nh532EvCS2foeyTgmzbcC8u+nCk/rEtKXA=" crossorigin="anonymous"></script>
+
+      <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/ico" />
+
+  </head>
+
+  <body>
 
     <!-- header home page section -->
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top py-3" role="navigation">
           <a href="#" class="navbar-left"><img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"></a><a class="navbar-brand" href="{% url 'home' %}">San Cristobal Coffee Importers</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" role='navigation'>
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="{% url 'about' %}">about us</a>
-        <a class="nav-item nav-link" href="{% url 'coffees' %}">our coffees</a>
-        <a class="nav-item nav-link" href="{% url 'source-work' %}">source work</a>
-        <a class="nav-item nav-link" href="{%url 'news'%}">news</a>
-        <a class="nav-item nav-link" href="http://www.trackyourcoffee.com">track-your-coffee</a>
-        <a class="nav-item nav-link" href="{%url 'contact'%}">contact</a>
-      </div>
-    </div>
-  </nav>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup" role='navigation'>
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="{% url 'about' %}">about us</a>
+              <a class="nav-item nav-link" href="{% url 'coffees' %}">our coffees</a>
+              <a class="nav-item nav-link" href="{% url 'source-work' %}">source work</a>
+              <a class="nav-item nav-link" href="{%url 'news'%}">news</a>
+              <a class="nav-item nav-link" href="http://www.trackyourcoffee.com">track-your-coffee</a>
+              <a class="nav-item nav-link" href="{%url 'contact'%}">contact</a>
+            </div>
+          </div>
+        </nav>
     </header>
     <div role="main" id="main">
         {% if user.is_authenticated %}
-    {% block content %}
-    {% endblock %}
+          {% block content %}
+          {% endblock %}
         {% else %}
-        <div class="header-of-site">
-        <div class="jumbotron text-center">
-            <h1 style="font-size: 6vw;">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
+      <div class="header-of-site">
+        <div class="text-center">
+            <h1 class="dark-text smaller-jumbotron">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
             <br>
             <a href="http://www.sancristocafe.com" class="btn btn-primary">Click here to visit our existing website</a>
             <br>
             <br>
             <h3>Or give us a call: </h3>
             <br>
-            <h3 style="color:#ad7b00; font-size: 5vw;"><strong>(425) 825-9106</strong></h3>
+            <h3 class="gold-text-lrg-responsive"><strong>(425) 825-9106</strong></h3>
         </div>
-    </div>
+      </div>
         {% endif %}
-  </div>
-  <footer class="footer">
-    <div class="container pt-2 text-center">
-      <p>&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class="text-muted"><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034</strong></small></p>
     </div>
-  </footer>
-</body>
+    <footer class="footer">
+      <div class="container pt-2 text-center">
+        <p>&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class="text-muted"><br><strong>   13244 Juanita Drive NE Kirkland, Washington 98034</strong></small></p>
+      </div>
+    </footer>
+  </body>
 </html>

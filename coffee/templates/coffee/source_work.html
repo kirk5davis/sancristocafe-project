@@ -3,22 +3,143 @@
 
 {% block content %}
 <div class="source-work">
-<div class="container">
-	<h1 class="text-center pt-3">Source Work</h1>
-	<hr />
-	<h3><a href="{% url 'home' %}" class="yellow-hyperlink">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Source Work</h3>
-	<hr />
-
-	<div class="row">
-		<h5>{{ newsletter.title }}:  &nbsp</h5><h5 class="text-muted">  {{ newsletter.brief_summary }}</h5>
-		<div class="col-lg-12" id="pdf_area" style="height:100vh;">
-        	<script>PDFObject.embed("{{ newsletter.file.url }}", "#pdf_area");</script>
+	<div class="container">
+		<h1 class="text-center pt-3">Source Work</h1>
+		<hr />
+		<p><a href="{% url 'home' %}" class="yellow-hyperlink">Home</a> <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"
+			 class="breadcrumb-bean" /> Source Work</p>
+		<hr />
+		<div class="row">
+			<div class="col-lg-4">
+				<figure class="figure">
+					<img src="{% static 'images/jim_kosalos.jpg' %}" class="figure-img img-fluid rounded">
+					<figcaption class="figure-caption"><small>James in Malinal with Christian Wolther</small></figcaption>
+				</figure>
+			</div>
+			<div class="col-lg-8">
+				<div class="btn-group d-flex py-1" role="group">
+					<a href="#current-newsletter" class="btn btn-primary w-100">Click here to view our latest newsletter</a>
+				</div>
+				<p>
+					In 1993, James Kosalos, then geophysicist, started working with coffee growers in Nayarit, Mexico.
+				</p>
+				<p>
+					Early on he saw large numbers of small-holder farmers without educational or financial resources to earn
+					consistent
+					income; a chain of commercialization that favored large producers/corporations. The industry purposefully sought
+					to
+					keep farmers removed from the final exported product, rewarding hard work with an income disconnected with its
+					cost of
+					production. This does not lead to sustainability.
+				</p>
+				<blockquote class="blockquote">
+					<p class="mb-0 gold-text"><strong>"Leave everything you touch, better than you found it."</strong></p>
+					<footer class="blockquote-footer">George Kosalos' Proverb<cite title="Source Title"> c. 1950's</cite></footer>
+				</blockquote>
+			</div>
+			<div class="col-lg-12">
+				James theorized that unbiased, science-based process controls would help growers improve their coffee quality and
+				consistency, growing away from the commodity market and into the specialty arena. San Cristobal Coffee Importers
+				was
+				incorporated in 1996 to give market access to the small-holder coffee producers of Nayarit; a huge step towards
+				environmental and economic sustainability in the area. Education, equality, and cooperation have guided San
+				Cristobal's
+				mission, it continues today over 25 years later.
+			</div>
+			<div class="col-lg-12 py-2">
+				<img src="{% static 'images/gtnay_flow_pic.jpg' %}" class="img-fluid rounded">
+			</div>
+			<div class="col-lg-12">
+				<p>
+					Today, San Cristobal is vertically integrated at source with Grupo Terruno Nayarita, an organized group of coffee
+					producing societies across 5 different community. The group is constantly growing, developing economy of scale
+					that helps with everything from exportation to bank loans to organic certification.
+				</p>
+				<p>
+					All members carry an equally weighed vote as shareholders, they determine the how/where to invest (ie
+					infrastructure), how they want to grow and whether new societies can join, following a probationary year. San
+					Cristobal also carries a vote at these meetings.
+				</p>
+			</div>
+			<div class="col-lg-12 text-center">
+				<h2 class="gold-text">Coffee Quality Management for Producer Centric Sustainablity</h2>
+			</div>
+			<div class="col-lg-5">
+				<p>
+					Cafe Sustentables de Mexico, in Tepic, Nayarit, serves as the administrative arm of Grupo Terruno Nayarita. James
+					Kosalos founded CSM in XXXX to close the gap separating coffee producers from their exportable product. They own and
+					operate the best dry mill in all of Nayarit.
+				</p>
+				<p class="dark-text"><strong>CSM serves Grupo Terruno Nayarita with:</strong></p>
+				<ul class="list-group list-group-flush">
+				<small>
+					<li class="list-group-item">Evaluation and producer feedback on daily patio lots (Q-grading/cupping);</li>
+					<li class="list-group-item">Maintain export documentation and Fincalab database, linking to <a href="http://www.trackyourcoffee.com" target="_blank" class="gold-text">TrackYourCoffee</a>;</li>
+					<li class="list-group-item">Coordinate and host producer meetings and trainings;</li>
+					<li class="list-group-item">Provide fiscal management and corporate record;</li>
+					<li class="list-group-item">Host Ecotours and visiting roasters/importers;</li>
+				</small>
+				</ul>
+			</div>
+			<div class="col-lg-7">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner py-2 rounded">
+						<div class="carousel-item active">
+						<img class="d-block w-100 img-responsive" src="{% static 'images/group_training1.png' %}" alt="First slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>CSM Group Training</h5>
+						</div>
+						</div>
+						<div class="carousel-item">
+						<img class="d-block w-100 img-responsive" src="{% static 'images/group_cupping.png' %}" alt="Second slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>CSM Group Cupping</h5>
+						</div>
+						</div>
+						<div class="carousel-item">
+						<img class="d-block w-100 img-responsive" src="{% static 'images/group_training2.png' %}" alt="Third slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>CSM Group Training</h5>
+						</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<p class="gold-text py-3 text-center">
+					<strong>
+					The trust between CSM, Grupo Terruno Nayarita, and San Cristobal is rooted in education, equality, and cooperation.
+					</strong>
+				</p>
+			</div>
+			
 		</div>
-    </div>
-	<br>
-	<div class="btn-group d-flex" role="group">
-            <a href="{% url 'archives' %}" class="btn btn-primary w-100">View past newsletters and docs</a>
-	</div>
+		<div class="row" id='current-newsletter'>
+			<div class="col-lg-12 text-center">
+				<h2 class="gold-text">Check out our latest newsletter from CSM</h2>
+			</div>
+			<div class="col-lg-12">
+				<p>{{ newsletter.title }}: <small class="text-muted">{{ newsletter.brief_summary }}</small></p>
+			</div>
+			<div class="col-lg-12" id="pdf_area" style="height:100vh;">
+				<script>PDFObject.embed("{{ newsletter.file.url }}", "#pdf_area");</script>
+			</div>
+		</div>
+		<br>
+		<div class="btn-group d-flex" role="group">
+			<a href="{% url 'archives' %}" class="btn btn-primary w-100">View past newsletters and docs</a>
+		</div>
 
 	</div>
 
