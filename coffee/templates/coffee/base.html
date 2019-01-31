@@ -26,6 +26,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
+      <!-- Barba.js for content transitioning -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" integrity="sha256-H0TPKZAP4+uKmBpntUUMrKgH4VXBQNDZumun6fvan4w=" crossorigin="anonymous"></script>
+      
       <!-- Custom JS -->
       <script type="text/javascript" src='{% static "js/main.js"%}'></script>
 
@@ -58,24 +61,28 @@
           </div>
         </nav>
     </header>
-    <div role="main" id="main">
-        {% if user.is_authenticated %}
-          {% block content %}
-          {% endblock %}
-        {% else %}
-      <div class="header-of-site">
-        <div class="text-center">
-            <h1 class="dark-text smaller-jumbotron">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
-            <br>
-            <a href="http://www.sancristocafe.com" class="btn btn-primary">Click here to visit our existing website</a>
-            <br>
-            <br>
-            <h3>Or give us a call: </h3>
-            <br>
-            <h3 class="gold-text-lrg-responsive"><strong>(425) 825-9106</strong></h3>
+    <div id="barba-wrapper">
+      <div class="barba-container">
+        <div role="main" id="main">
+            {% if user.is_authenticated %}
+              {% block content %}
+              {% endblock %}
+            {% else %}
+          <div class="header-of-site">
+            <div class="text-center">
+                <h1 class="dark-text smaller-jumbotron">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
+                <br>
+                <a href="http://www.sancristocafe.com" class="btn btn-primary">Click here to visit our existing website</a>
+                <br>
+                <br>
+                <h3>Or give us a call: </h3>
+                <br>
+                <h3 class="gold-text-lrg-responsive"><strong>(425) 825-9106</strong></h3>
+            </div>
+          </div>
+            {% endif %}
         </div>
       </div>
-        {% endif %}
     </div>
     <footer class="footer">
       <div class="container pt-2 text-center">
