@@ -10,6 +10,9 @@
             <p>
               <a href="{%url 'contact'%}" class="btn btn-primary my-2">Contact Us</a>
             </p>
+            <div class="arrow bounce">
+              <a class="fa fa-arrow-down fa-2x" href="#about"></a>
+            </div>
           </div>
         </section>
       </div>
@@ -18,7 +21,7 @@
 
 
     <!-- about us section -->
-    <div class="about">
+    <div class="about" id="about">
         <h1 class="text-center">About Us</h1>
         <div class="container">
           <div class="row">
@@ -121,7 +124,7 @@
               {% endfor %}
           </div>
           
-          <p><a href="{% url 'news' %}" class="btn btn-primary my-4">See all news</a></p>
+          <p><a href="{% url 'news' %}" class="btn btn-primary my-4" target="_top">See all news</a></p>
           </div>       
     </div>
         <!-- end of news/blog section -->

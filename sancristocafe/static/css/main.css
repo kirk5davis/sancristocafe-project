@@ -58,6 +58,10 @@ h1{
   margin: 0.5em;
 }
 
+a{
+  color: #ad7b00;
+}
+
 .smaller-jumbotron{
   font-size: 6vw;
 }
@@ -79,6 +83,46 @@ h1{
   border: 1rem solid rgba(0,0,0,.1); 
 }
 
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+
+/*navigational bouncing arrow style*/
+.bounce-arrow {
+  color: black;
+  text-decoration: none;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 /*footer debug style*/
 
 .footer {
@@ -101,7 +145,7 @@ h1{
  background:#333333;
  width: 100%;
  position: fixed;
- z-index: 1000;
+ z-index: 1;
 }
 
 #main {
@@ -244,13 +288,6 @@ border-color: #e09f00;
 .about .desc p{
  line-height:1.5;
  color:#888;
-}
-
-.about-us{
-}
-
-.about-us h3 a{
-color:#ad7b00;
 }
 
 .accordian-headers{

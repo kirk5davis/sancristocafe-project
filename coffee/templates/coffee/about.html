@@ -1,11 +1,10 @@
 {% extends 'coffee/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<div class="about-us">
 <div class="container">
 	<h1 class="text-center pt-3">About Us</h1>
 	<hr />
-	<h3><a href="{% url 'home' %}"">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  About Us</h3>
+	<p><a href="{% url 'home' %}"">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  About Us</p>
 	<hr />
 	<h3>San Cristobal Coffee Importers <small class="text-muted"> provides the finest green coffees from all origins. The company sources and purchases exceptional coffees around the world and encourages sustainability by assisting growers in producing quality coffees year after year.</small></h3>
 	<blockquote class='blockquote text-center'>
@@ -108,7 +107,7 @@
     	</div>
     <br><br>
 	</div>
-</div>
+
 
 
 

@@ -2,11 +2,10 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="blog">
 <div class="container">
 		<h1 class="text-center pt-3">News</h1>
 		<hr />
-		<h3><a href="{% url 'home' %}"">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  <a href="{% url 'news' %}"">News</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  {{ post_detail.title }}</h3>
+		<p><a href="{% url 'home' %}"">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  <a href="{% url 'news' %}"">News</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  {{ post_detail.title }}</p>
 		<hr />
 		<div class="static-font">
 		<h5 class="text-center py-3">{{post_detail.summary}}</h5>
@@ -15,7 +14,6 @@
 		<hr />
 		<small class="text-muted"><strong>Posted on:</strong> {{post_detail.created_on}}</small>
 			</div>
-</div>
 </div>
 <br>
 <br>

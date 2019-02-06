@@ -2,11 +2,10 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="blog">
 <div class="container">
 	<h1 class="text-center pt-3">Archive Document View</h1>
 	<hr />
-		<h3><a href="{% url 'home' %}">Home</a>
+		<p><a href="{% url 'home' %}">Home</a>
 			<img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />
 			<a href="{% url 'news' %}">News</a>
 			<img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />
@@ -15,13 +14,16 @@
 			{{ archive_file.title }}
 
 
-		</h3>
+		</p>
 	<hr />
 
 	<div class="row">
 		<h5>{{ archive_file.title }}:  &nbsp</h5><h5 class="text-muted">  {{ archive_file.brief_summary }} </h5>
 		<div class="col-lg-12" id="pdf_area" style="height:100vh;">
         	<script>PDFObject.embed("{{ archive_file.file.url }}", "#pdf_area");</script>
+		</div>
+		<div class="col-lg-12 text-center">
+			<small>Can't see the Newletter? Are you using Internet Explorer? If so, install <a href='https://get.adobe.com/reader/'>Adobe Reader</a> or download the latest newletter <a href="{{ newsletter.file.url }}" target="_blank">here!</a></small>
 		</div>
     </div>
 	<br>
@@ -31,7 +33,6 @@
 
 	</div>
 
-</div>
 </div>
 <br>
 {% endblock %}
