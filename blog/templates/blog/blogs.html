@@ -8,14 +8,11 @@
 	<p><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  News</p>
 	<hr />
 	<h5 class="text-muted text-center"> Coffee never sleeps! Read up on what's happening at San Cristobal and the industry. </h5>
-    <p class="text-muted"></p>
-            <div class="btn-group d-flex" role="group">
-                <a href="{% url 'source-work' %}" class="btn btn-primary w-100">See our latest Newsletter</a>
-            </div>
     <br>
 	          <div class="row">
-                {% for blog in blogs %}
-                <div class="col-lg-6 pt-2 card-group">
+              <div class="col-lg-12">
+                <h5>Our latest news article</h5>
+                  {% for blog in blogs|slice:"0:1" %}
                   <div class="card">
                     <img class="card-img-top blog-thumbnail" src="{{blog.image.url}}" alt="Card image cap" />
                       <div class="card-body">
@@ -26,11 +23,36 @@
                       <small class="text-muted">{{blog.created_on}}</small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
                     </div>
                   </div>
-              </div>
                   {% endfor %}
-          </div>
+                  
+              </div>
+              <div class="col-lg-12">
+                <h5>Past news articles</h5>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for blog in blogs|slice:"1:" %}
+                        <div class="swiper-slide card">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
+                              <p class="card-text"> {{ blog.summary }}</p>
+                              <p><small class="text-muted">{{blog.created_on}}</p><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a></small>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+	          </div>
           <div class="row">
-            <br />
+            <div class="col-lg-12">
+              <br />
+              <br />
+              <br />
+
+            </div>
           </div>
 
 

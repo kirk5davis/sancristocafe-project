@@ -16,30 +16,41 @@ var smoothScrolling = function(){
         };
 var kirk = new smoothScrolling();
 
+var swipeCarousel = function(){
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
+    }
+  });
+}
+		
 
 $(document).ready(function(){
-  // adjust the homepage splash photo to the window size
-    // // Add smooth scrolling to all links
-    // $("a").on('click', function(event) {
-    //   // Make sure this.hash has a value before overriding default behavior
-    //   if (this.hash !== "") {
-    //     // Prevent default anchor click behavior
-    //     event.preventDefault();
-    //     // Store hash
-    //     var hash = this.hash;
-    //     // Using jQuery's animate() method to add smooth page scroll
-    //     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    //     console.log('found a hash!')
-    //     $('html, body').animate({
-    //       scrollTop: $(hash).offset().top
-    //     }, 800, function(){
-    //       // Add hash (#) to URL when done scrolling (default click behavior)
-    //       window.location.hash = hash;
-    //     });
-    //   } // End if
-    // });
+  
   var kirk = new smoothScrolling();
-
+  var carousel = new swipeCarousel();
   // add smooth transitioning between pages
   var transEffect = Barba.BaseTransition.extend({
     start: function start() {
@@ -78,6 +89,7 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, barbaCon
         }
     }
     var scrollEvent = new smoothScrolling();
+    var carousel = new swipeCarousel();
 
 });
 

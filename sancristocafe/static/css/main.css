@@ -7,30 +7,8 @@ Author: Kirk Davis
 
 /****** General Styles *********/
 html {
-  font-size: 1rem;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-}
-
-
-html {
   height: 100%;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
@@ -175,8 +153,8 @@ padding-top:60px;
 padding-right:3px;
 padding-top: 3px;
 display:inline-block;
-height=auto;
-width=auto;
+height:auto;
+width:auto;
 }
 
 .navbar-collapse{
@@ -343,9 +321,9 @@ font-weight: bold;
 
 /*blog and news section*/
 
-.card{
+/* .card{
  box-shadow: 0 0 20px #ccc;
-}
+} */
 
 .blog{
  position: relative;
@@ -356,13 +334,10 @@ font-weight: bold;
  font-weight:bold;
 }
 
-.blog .card{
- box-shadow: 0 0 20px #ccc;
-}
+
 .blog .card img{
  width: auto;
  height: 12em;
- align:center;
 }
 
 .blog-thumbnail{
@@ -404,7 +379,6 @@ font-weight: bold;
 .blog-date{
 display: inline;
 text-align: right;
- width: 140px;
 }
 
 .blog p{
@@ -424,6 +398,10 @@ color:#ad7b00;
 .blog-button{
   display: inline-flex;
   justify-content: space-between;
+}
+
+.inner-border{
+  border: #333333;
 }
 
 .static-font{
@@ -471,7 +449,6 @@ color:#ad7b00;
   height: 20px;
   width:auto;
 }
-}
 
 .centered-img{
     margin-left: auto;
@@ -489,4 +466,28 @@ color:#ad7b00;
 .gold-text-lrg-responsive {
   color:#ad7b00; 
   font-size: 5vw;
+}
+
+.swiper-container {
+  width: 80%;
+  height: 100%;
+  z-index:0;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
