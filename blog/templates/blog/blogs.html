@@ -7,14 +7,14 @@
 	<hr />
 	<p><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  News</p>
 	<hr />
-	<h5 class="text-muted text-center"> Coffee never sleeps! Read up on what's happening at San Cristobal and the industry. </h5>
-    <br>
+	<h5 class="gold-text text-center"> Coffee never sleeps! Read up on what's happening at San Cristobal and the industry. </h5>
 	          <div class="row">
               <div class="col-lg-12">
-                <h5>Our latest news article</h5>
+                <div class="text-center" width="80%">
+                <h4 class="dark-text py-3">Our latest news article</h4>
                   {% for blog in blogs|slice:"0:1" %}
-                  <div class="card">
-                    <img class="card-img-top blog-thumbnail" src="{{blog.image.url}}" alt="Card image cap" />
+                  <div class="card mx-auto" style="max-width:50%;">
+                    <img class="card-img-top blog-thumbnail d-block" src="{{blog.image.url}}" alt="Card image cap" />
                       <div class="card-body">
                         <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
                         <p class="card-text"> {{ blog.summary }}</p>
@@ -23,19 +23,22 @@
                       <small class="text-muted">{{blog.created_on}}</small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
                     </div>
                   </div>
+                </div>
                   {% endfor %}
                   
               </div>
-              <div class="col-lg-12">
-                <h5>Past news articles</h5>
+              <div class="col-lg-12 text-center">
+                <h4 class="dark-text py-3">Past news articles</h4>
+              </div>
+              <div class="col-lg-12 text-center">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         {% for blog in blogs|slice:"1:" %}
-                        <div class="swiper-slide card">
+                        <div class="swiper-slide card d-block">
                             <div class="card-body">
                               <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
                               <p class="card-text"> {{ blog.summary }}</p>
-                              <p><small class="text-muted">{{blog.created_on}}</p><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a></small>
+                              <p class="text-muted small">{{blog.created_on}}  <a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a></p>
                             </div>
                         </div>
                         {% endfor %}
@@ -45,21 +48,37 @@
                     <div class="swiper-button-prev"></div>
                   </div>
                 </div>
-	          </div>
+              </div>
+              <br>
+</div>
           <div class="row">
             <div class="col-lg-12">
-              <br />
-              <br />
-              <br />
-
+              <div class="dark-background">
+                <br>
+                <br>
+                <img src="{% static 'images/cereza_6_cropped.jpg' %}" style="width:100%"/>
+                <br>
+                <br>
+                <br>
+              </div>
             </div>
+            
           </div>
-
-
+        <div class="container">
+          <div clasa="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="dark-text py-3"><a href="https://www.instagram.com/sancristocafe/"><i class="fa fa-instagram" aria-hidden="true"></i> Connect with us on Instagram!  <i class="fa fa-instagram" aria-hidden="true"></i></h1></a>
+            </div>
+            <div class="col-lg-12 text-center">
+              <!-- LightWidget WIDGET -->
+              <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/53451a4e3575568ab56596fc33f9675d.html"
+                scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+            </div>
             <div class="btn-group d-flex" role="group">
                 <a href="{% url 'archives' %}" class="btn btn-primary w-100">Check out the archives</a>
             </div>
-</div>
+          </div>
+        </div>        
 <br>
 <br>
 {% endblock %}

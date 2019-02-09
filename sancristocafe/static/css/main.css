@@ -12,11 +12,11 @@ html {
   box-sizing: border-box;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} */
 
 body {
   font-family: 'Roboto Slab', serif;
@@ -42,6 +42,10 @@ a{
 
 .smaller-jumbotron{
   font-size: 6vw;
+}
+
+.dark-background{
+  background-color: #333333;
 }
 
 .dark-text {
@@ -341,9 +345,9 @@ font-weight: bold;
 }
 
 .blog-thumbnail{
-  object-fit: scale-down;
+  object-fit: cover;
   width: auto;
-  height: 100px;
+  height: 200px;
   margin: 1em;
   border-radius: 15px;
 }
@@ -364,6 +368,7 @@ font-weight: bold;
 .blog .card-body{
  padding: 1em;
  color:#888;
+ display:block;
 }
 
 .blog .card_link{
@@ -469,7 +474,6 @@ color:#ad7b00;
 }
 
 .swiper-container {
-  width: 80%;
   height: 100%;
   z-index:0;
 }

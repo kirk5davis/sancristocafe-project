@@ -19,7 +19,7 @@ var kirk = new smoothScrolling();
 var swipeCarousel = function(){
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 30,
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
