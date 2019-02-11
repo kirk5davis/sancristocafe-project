@@ -13,15 +13,25 @@
                 <div class="text-center" width="80%">
                 <h4 class="dark-text py-3">Our latest news article</h4>
                   {% for blog in blogs|slice:"0:1" %}
-                  <div class="card mx-auto" style="max-width:50%;">
-                    <img class="card-img-top blog-thumbnail d-block" src="{{blog.image.url}}" alt="Card image cap" />
+                  <style>
+                      .latest-article-background{
+                       background-attachment: local;
+                       background-size: cover;
+                       background-position: center;
+                       background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.80) 0%,rgba(244, 244, 244, 0.80) 100%), url('{{blog.image.url}}');
+                       justify-content:center;
+                       align-items:center;
+                       display:flex;
+                      
+                      }
+                      </style>
+                  <div class="card mx-auto latest-article-background shadow-lg d-block" style="max-width:65%; height:300px;">
+                    <!-- <img class="card-img-top blog-thumbnail d-block" src="{{blog.image.url}}" alt="Card image cap" /> -->
                       <div class="card-body">
-                        <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
-                        <p class="card-text"> {{ blog.summary }}</p>
+                        <h2 class="card-title" style="font-size: 5vh;"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h2>
+                        <h3 class="card-text" style="font-size:3vh;"> {{ blog.summary }}</h3>
+                        <p>Posted on: </p><small class="text-muted">{{blog.created_on}} </small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
                       </div>
-                    <div class="card-footer blog-button">
-                      <small class="text-muted">{{blog.created_on}}</small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
-                    </div>
                   </div>
                 </div>
                   {% endfor %}
@@ -51,8 +61,9 @@
               </div>
               <br>
 </div>
-          <div class="row">
-            <div class="col-lg-12">
+        
+          <div class=row>
+              <div class="col-lg-12">
               <div class="dark-background">
                 <br>
                 <br>
@@ -62,7 +73,6 @@
                 <br>
               </div>
             </div>
-            
           </div>
         <div class="container">
           <div clasa="row">

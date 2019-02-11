@@ -4,10 +4,8 @@ $('.header-of-site').height($(window).height());
 
 var smoothScrolling = function(){
   $('a[href*="#"]').on('click', function (e) {
-            console.log('clicked an a with href=#');
             if ( $(e.target.hash).length ) {
               e.preventDefault();
-              console.log('got here');
             $('html, body').animate({
               scrollTop: $($(this).attr('href')).offset().top
             }, 500, 'linear');

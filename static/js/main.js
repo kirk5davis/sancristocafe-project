@@ -1,79 +1,55 @@
 //main.js - some simple javascript for the sancristocafe site
 
-//when the page first opens
-$(document).ready(function(){
- $('.header-of-site').height($(window).height());
-});
-//
-////if the page gets resized change the height of the header to match that space
-$(window).on('resize',function(){
-	$('.header-of-site').height($(window).height())
-});
+$('.header-of-site').height($(window).height());
 
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+var smoothScrolling = function(){
+  $('a[href*="#"]').on('click', function (e) {
+            if ( $(e.target.hash).length ) {
+              e.preventDefault();
+            $('html, body').animate({
+              scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+          };
+          });
+        };
+var kirk = new smoothScrolling();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-$(function () {
-  var lastScrollTop = 0;
-  var $navbar = $('.navbar');
-
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-
-    if (st > lastScrollTop) { // scroll down
-
-      // use this is jQuery full is used
-      $navbar.fadeOut()
-
-      // use this to use CSS3 animation
-      // $navbar.addClass("fade-out");
-      // $navbar.removeClass("fade-in");
-
-      // use this if no effect is required
-      // $navbar.hide();
-    } else { // scroll up
-
-      // use this is jQuery full is used
-      $navbar.fadeIn()
-
-      // use this to use CSS3 animation
-      // $navbar.addClass("fade-in");
-      // $navbar.removeClass("fade-out");
-
-      // use this if no effect is required
-      // $navbar.show();
+var swipeCarousel = function(){
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
     }
-    lastScrollTop = st;
   });
-});
+}
+		
 
-// transitioning between content
-'use strict';
-
-$('document').ready(function () {
+$(document).ready(function(){
+  
+  var kirk = new smoothScrolling();
+  var carousel = new swipeCarousel();
+  // add smooth transitioning between pages
   var transEffect = Barba.BaseTransition.extend({
     start: function start() {
       var _this2 = this;
@@ -86,6 +62,7 @@ $('document').ready(function () {
       nc.hide();
       var _this = this;
       $(this.oldContainer).fadeOut(300).promise().done(function () {
+        $(window).scrollTop(0); 
         nc.css('visibility', 'visible');
         nc.fadeIn(300, function () {
           _this.done();
@@ -97,4 +74,58 @@ $('document').ready(function () {
     return transEffect;
   };
   Barba.Pjax.start();
+  // don't forget to run <script> contents if it is available
+Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, barbaContainer, newPageRawHTML) {
+    var els = barbaContainer ? barbaContainer.querySelectorAll('script') : null;
+    if (els !== null && els.length > 0) {
+        for (var i = 0, l = els.length; i < l; i++) {
+            var el = els[i];
+            if (el) {
+                var evalJsCode = new Function(el.innerHTML);
+                evalJsCode();
+            }
+        }
+    }
+    var scrollEvent = new smoothScrolling();
+    var carousel = new swipeCarousel();
+
+});
+
+Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container){
+});
+
+});
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+$(function () {
+  var lastScrollTop = 0;
+  var $navbar = $('.navbar');
+
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) { // scroll down
+      // use this is jQuery full is used
+      // $navbar.fadeOut()
+      // use this to use CSS3 animation
+      $navbar.addClass("fade-out");
+      $navbar.removeClass("fade-in");
+      // use this if no effect is required
+      // $navbar.hide();
+    } else { // scroll up
+      // use this is jQuery full is used
+      // $navbar.fadeIn()
+      // use this to use CSS3 animation
+      $navbar.addClass("fade-in");
+      $navbar.removeClass("fade-out");
+      // use this if no effect is required
+      // $navbar.show();
+    }
+    lastScrollTop = st;
+  });
+});
+
+
+//if the page gets resized change the height of the header to match that space
+$(window).on('resize',function(){
+	$('.header-of-site').height($(window).height())
 });

@@ -3,19 +3,13 @@
 
 {% block content %}
 <div class="container">
-		<h1 class="text-center pt-3">Archived Newletters and Documents</h1>
+		<h1 class="text-center pt-3">Archived Newsletters and Documents</h1>
 		<hr />
 		<p><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  <a href="{% url 'news' %}"">News</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Archives</p>
 		<hr />
-		<div>
-			<div>
-			<img src="{% static 'images/archives.png' %}" style="width:100%;"/>
-			<div class="text-center" style="position: absolute; top: 50%;left: 50%; transform: translate(-50%, -50%);">
-				<h1 style="font-size: 7vw;   text-shadow: 5px 5px 10px white, 0 0 25px white, 0 0 5px white; ">The Archives</h1>
-			</div>
-				</div>
-
-		</div>
+		<div class="row archive-header text-center" style="background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/archives.png');">
+				<h1 style="font-size: 6vw;   text-shadow: 5px 5px 10px white, 0 0 25px white, 0 0 5px white; ">The Archives</h1>
+	  </div>
 	<p><strong>Explore historical write-ups and thought provoking articles, still relevant over 10 years later</strong></p>
 		<div class="accordion" id="accordionExample">
                   <div class="card">
