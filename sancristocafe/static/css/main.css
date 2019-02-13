@@ -142,12 +142,12 @@ padding-top:60px;
 
 .navbar-brand{
   font-family: 'Poppins', sans-serif;
+  font-size:1rem;
 }
 
 .nav-link , .navbar-brand{
  color: #f4f4f4;
  cursor: pointer;
- margin: auto;
 }
 .nav-link{
  margin-right: 1em !important;
