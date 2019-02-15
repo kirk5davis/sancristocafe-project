@@ -1,6 +1,9 @@
 //main.js - some simple javascript for the sancristocafe site
 
-$('.header-of-site').height($(window).height());
+
+var resizeHeaderImg = function(){
+  $('.header-of-site').height($(window).height());
+};
 
 var smoothScrolling = function(){
   $('a[href*="#"]').on('click', function (e) {
@@ -12,7 +15,6 @@ var smoothScrolling = function(){
           };
           });
         };
-var kirk = new smoothScrolling();
 
 var swipeCarousel = function(){
   var swiper = new Swiper('.swiper-container', {
@@ -46,7 +48,8 @@ var swipeCarousel = function(){
 		
 
 $(document).ready(function(){
-  
+  $('.header-of-site').height($(window).height());
+  var resize = new resizeHeaderImg();
   var kirk = new smoothScrolling();
   var carousel = new swipeCarousel();
   // add smooth transitioning between pages
@@ -88,6 +91,7 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, barbaCon
     }
     var scrollEvent = new smoothScrolling();
     var carousel = new swipeCarousel();
+    var resize = new resizeHeaderImg();
 
 });
 
