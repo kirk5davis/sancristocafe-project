@@ -1,0 +1,112 @@
+{% extends 'coffee/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="text-center pt-3">Traceability - the Sustainablity Solution</h1>
+		<hr />
+		<p><a href="{% url 'home' %}" class="yellow-hyperlink">Home</a> <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}"
+			 class="breadcrumb-bean" /> Traceability</p>
+		<hr />
+		<div class="row">
+				<div class="col-lg-6">
+					<img src="{% static 'images/calvin_hobbes_traceability.jpg' %}" class="figure-img border img-fluid rounded w-100">
+				</div>
+			<div class="col-lg-6 text-center" style="align-self: center;">
+				<p class="text-muted">Visit San Cristobal's traceability solution:</p>
+				<div class="btn-group d-flex py-1" role="group">
+					<a href="http://trackyourcoffee.com" class="btn btn-primary w-100">TrackYourCoffee.com</a>
+				</div>
+				<hr>
+				<blockquote class="blockquote">
+					<p class="mb-0 gold-text"><strong>"Sustainablity without traceability is specious"</strong></p>
+					<footer class="blockquote-footer text-left"><strong>specious</strong>
+						<cite title="Source Title">
+							<ol>
+								<li>
+									apparently good or right though lacking real merit; superficially pleasing or plausible.
+								</li>
+								<li>
+									pleasing to the eye but deceptive
+								</li>
+							</ol>
+						</cite>
+					</footer>
+				</blockquote>
+				<hr>
+				<p><small></small></p>
+			</div>
+		</div>
+	</div>
+	<br>
+		<div class="row row-no-margins dark-background align-items-center">
+				<div class="col-md-1 text-center">
+					<img class="ml-3 py-2" width="auto" height="200px" src="{% static 'images/grupo_terruno_nayarita.jpg' %}"></img>
+				</div>
+				<div class="col-md-11  text-center">
+					<h1 class="text-white py-2" style="font-size: 4vw;">All coffees from <a href="http://www.gtnay.com/"><strong>Grupo Terru&ntildeo Nayarita</strong></a> have been 100% traceable since 2006.</h1>
+				</div>
+		</div>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+					<h5 class="gold-text"><strong>ALL</strong> of our coffees contain barcoded bag tags, sewn in at origin, furnished with QR Codes that are linked to our <strong><a href="http://trackyourcoffee.com">TrackYourCoffee</a></strong> website where you will find all microlot information, including but not limited to:</h5>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Country of Origin</li>
+						<li class="list-group-item">Community of Origin</li>
+						<li class="list-group-item">Producing Organization</li>
+						<li class="list-group-item">Dry Mill</li>
+						<li class="list-group-item">Wet Mill(s)</li>
+						<li class="list-group-item">Type/Name of Coffee</li>
+						<li class="list-group-item">Any Certificates (including organic)</li>
+						<li class="list-group-item">Grading Aspect</li>
+						<li class="list-group-item">Cup Characteristics</li>
+						<li class="list-group-item">Blend Information (if applicable)</li>
+					</ul>
+			</div>
+			<div class="col-lg-5">
+					<a href="http://trackyourcoffee.com/tracker?entry=GTN4103056"><img src="{% static 'images/bagtag_traceability.jpg' %}" class="img-responsive rounded w-100 figure-img"></a>
+					<figcaption class="figure-caption">Click on the picture above to see the TrackYourCoffee results for this barcode in this picture</figcaption>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-lg-12">
+				<img src="{% static 'images/bar_code_3.gif' %}" class="img-responsive rounded w-100 figure-img">
+			</div>
+			<div class="col-lg-12">	
+				<hr />
+				<p>The data reported to <a href="http://trackyourcoffee.com">TrackYourCoffee.com</a> is the <em>tip-of-the-iceberg</em> when compared to the amount of data collected.  The information at <a href="http://trackyourcoffee.com">TrackYourCoffee.com</a> is generated automatically from our Fincalab cloud-based software, based on data collected during the harvest at multiple points and self audited for accuracy.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row row-no-margins dark-background align-items-center">
+			<div class="col-md-4 text-center">
+				<img class="ml-3 py-2 rounded" width="auto" height="300px" src="{% static 'images/cherry_reception_weighing.jpg' %}"></img>
+			</div>
+			<div class="col-md-4  text-center">
+				<h5 class="text-white">It begins at reception, each farmer reports what parcella he/she was harvesting each day when delivering ripe fruit to the wet mills/patios. Traceability starts here with <strong>ALL</strong> farmers that we work with, not just the producing organization. Without data collection and analysis starting at reception in the supply chain, it would be false to claim 100% traceability.</h5>
+			</div>
+			<div class="col-md-4  text-center">
+				<img class="ml-3 py-2 rounded" width="auto" height="300px" src="{% static 'images/cherry_processing_pantano.jpg' %}"></img>
+			</div>
+	</div>
+	<br>
+	<div class="container">
+			<div class="row">
+				<div class="col-lg-1">
+				</div>
+				<div class="col-lg-10 text-center">
+					<h3>Visit <strong><a href="http://trackyourcoffee.com">TrackYourCoffee.com</a></strong> to learn more about your microlot from <a href="http://www.gtnay.com/"><strong>Grupo Terru&ntildeo Nayarita!</strong></a></h3>
+				</div>
+				<div class="col-lg-1">
+				</div>
+		</div>
+	</div>
+
+
+
+
+<br>
+{% endblock %}

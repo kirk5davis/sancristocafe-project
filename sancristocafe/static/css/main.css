@@ -197,7 +197,6 @@ background-color: rgba(255,255,255,.0);
   color:#343a40;
 }
 
-
 .description h1{
  color: #343a40;
  font-family: 'Proza Libre', sans-serif;
@@ -248,6 +247,11 @@ border-color: #333333;
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
 background-color: #ad7b00;
 border-color: #e09f00;
+}
+
+.row-no-margins{
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*about us style*/

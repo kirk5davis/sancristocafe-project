@@ -20,3 +20,6 @@ def coffees(request):
 def source_work(request):
 	latest_newsletter = Newsletter.objects.all().order_by('-vintage')[0]
 	return render(request, 'coffee/source_work.html', {"newsletter":latest_newsletter})
+
+def traceability(request):
+	return render(request, 'coffee/traceability.html')
