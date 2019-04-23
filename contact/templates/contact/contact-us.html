@@ -8,41 +8,73 @@
 	<p><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Contact Us</p>
 	<hr />
 		<div class="row align-items-center">
-    	<div class="col-lg-6 text-center">
-
-			<img src="{% static 'images/contact_us_phone.jpg' %}" class="img-responsive" height="auto" width="100%"/>
-		</div>
-		<div class="col-lg-6 text-center">
-			<br>
-			<h3>Have a question or specific need? Give us a ring!</h3>
-			<h1>(425) 825-9106</h1>
-			<br>
-			<h3>Or fill in the contact form and we'll respond as soon as we can. Thanks!</h3>
-
-		</div>
+			<div class="col-lg-7 text-center">
+					<div class="row align-items-center">
+						<div class="col-lg-12 py-2 mx-2">
+								<h3>Have a question or a specific need?</h3>
+								<h2 class="gold-text"><strong>(425) 825-9106</strong></h2>
+						</div>
+						<div class="col-lg-12 py-2">
+								<img src="{% static 'images/blue_tele.jpg' %}" class="img-responsive rounded w-100">
+						</div>
+					</div>
+								
+			</div>
+			<div class="col-lg-5 text-center">
+				<div class="card">
+					<div class="card-header">
+						<h4>Reach out to us via this form</h4>
+						<small>We'll get back to you as soon as we can!</small>
+					</div>
+					<div class="card-body">
+						<form method="post" class="text-center">
+							<small>
+							{% csrf_token %}
+							{{ form.as_p }}
+						</small>
+							<div class="form-actions">
+								<button type="submit" class="btn-sm btn-primary text-center small">Send</button>
+							</div>
+							<br />
+						</form>
+							<p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>
+					</div>
+					</div>
+			</div>
 		</div>
 	<div class="row justify-content-md-center">
 		<div class="col-lg-12 text-center">
-			<div class="accordion" id="accordionExample">
+			<div class="accordion py-2" id="accordionExample">
 					  <div class="card">
 						<div class="card-header card-header-color" id="heading1">
 							<button class="btn btn-link btn-block collasped nounderline" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-							  <h4 class="mb-1 accordian-headers">Click here for Contact Form</h4>
+							  <h4 class="mb-1 accordian-headers">Other links to check out </h4>
 							</button>
 						</div>
 
 						<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
-						  <div class="card-body
-">
-							<form method="post" class="text-center">
-								{% csrf_token %}
-								{{ form.as_p }}
-								<div class="form-actions">
-								  <button type="submit" class="btn btn-primary text-center">Send</button>
-								</div>
-								<br />
-							</form>
-							  <p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>
+						  <div class="card-body">
+								<p>Under construction...</p>
+									<table class="table table-bordered">
+										<tbody>
+											<tr>
+												<td>
+													TrackYourCoffee
+												</td>
+												<td>
+													Cafe Sustentables de Mexico
+												</td>
+												<td>
+													Grupo Terru&ntildeo Nayarita
+												</td>
+												<td>
+													Finca Lab
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+
 						</div>
 					  </div>
 					</div>
