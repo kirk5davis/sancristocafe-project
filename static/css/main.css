@@ -77,10 +77,6 @@ a{
   transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 
-.row-no-margins{
-  margin-left: 0px;
-  margin-right: 0px;
-}
 
 /*navigational bouncing arrow style*/
 .bounce-arrow {
@@ -201,7 +197,6 @@ background-color: rgba(255,255,255,.0);
   color:#343a40;
 }
 
-
 .description h1{
  color: #343a40;
  font-family: 'Proza Libre', sans-serif;
@@ -252,6 +247,11 @@ border-color: #333333;
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
 background-color: #ad7b00;
 border-color: #e09f00;
+}
+
+.row-no-margins{
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*about us style*/
@@ -352,16 +352,17 @@ font-weight: bold;
 
 
 .blog .card img{
- width: auto;
  height: 12em;
+  border-radius: 15px;
+  object-fit: cover;
 }
 
-.blog-thumbnail{
-  object-fit: cover;
-  width: auto;
-  height: 200px;
-  margin: 1em;
-  border-radius: 15px;
+.card-hover{
+  transition: box-shadow .3s;
+}
+
+.card-hover:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .blog-detail-img{

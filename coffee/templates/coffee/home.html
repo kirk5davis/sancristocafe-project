@@ -113,24 +113,41 @@
     <!-- blog/new section -->
     <!-- Posts section -->
     <div class="blog">
-      <h1 class="text-center">News</h1>
+      <h1 class="text-center">Learn more about what we do</h1>
         <div class="container">
-          <div class="card-deck">
-            {% for blog in blogs %}
-              <div class="card">
-                <img class="card-img-top blog-thumbnail" src="{{blog.image.url}}" alt="Card image cap" />
+          <div class="row align-items-top">
+            <div class="col-lg-4">
+
+              <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+                  <h3 class="card-title py-3"><a href="{% url 'source-work' %}" class="text-dark">Our Source Work</a></h3> 
+                  <a href="{% url 'source-work' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/cherry_reception_weighing.jpg' %}" alt="Card image cap" /></a>
                   <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
-                    <p class="card-text"> {{ blog.summary }}</p>
+                    <p class="card-text">Being vertically integrated keeps us busy! Learn more about our activities at the source in Nayarita, Mexico</p>
+                    <a href="{% url 'traceability' %}" class="btn-sm btn-primary my-2">Go to Source Work Page</a>
                   </div>
-                <div class="card-footer blog-button">
-                  <small class="text-muted">{{blog.created_on}}</small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
-                </div>
               </div>
-              {% endfor %}
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+                  <h3 class="card-title py-3"><a href="{% url 'traceability' %}" class="text-dark">Our Traceability</a></h3>
+                  <a href="{% url 'traceability' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/bagtag_traceability.jpg' %}" alt="Card image cap" /></a>
+                    <div class="card-body">
+                      <p class="card-text">Where does your coffee come from? Tracking coffee back to it's origin is very important to us. Learn more about how we address traceability.</p>
+                      <a href="{% url 'traceability' %}" class="btn-sm btn-primary my-2">Go to Traceability Page</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+                    <h3 class="card-title py-3"><a href="{% url 'news' %}" class="text-dark">Our News</h3></a>
+                    <a href="{% url 'news' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/group_training2.png' %}" alt="Card image cap" /></a>
+                      <div class="card-body">
+                        <p class="card-text">We publish monthly newsletters and periodic articles. Find out the latest information on what's happening at San Cristobal Coffee Importers.</p>
+                        <a href="{% url 'news' %}" class="btn-sm btn-primary my-2">Go to News Page</a>
+                      </div>
+                  </div>
           </div>
-          
-          <p><a href="{% url 'news' %}" class="btn btn-primary my-4" target="_top">See all news</a></p>
+          </div>
           </div>       
     </div>
         <!-- end of news/blog section -->
