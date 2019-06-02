@@ -7,83 +7,94 @@
 	<hr class="mb-0"/>
 	<p class="small my-1"><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Contact Us</p>
 	<hr class="mt-0"/>
-		<div class="row align-items-center">
-			<div class="col-lg-7 text-center">
-					<div class="row align-items-center">
-						<div class="col-lg-12 py-2 mx-2">
-								<h3>Have a question or a specific need?</h3>
-								<h2 class="gold-text"><strong>(425) 825-9106</strong></h2>
-						</div>
-						<div class="col-lg-12 py-2">
-								<img src="{% static 'images/blue_tele.jpg' %}" class="img-responsive rounded w-100">
-						</div>
-					</div>
-								
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h2 class="font-weight-bold gold-text">Get in Touch</h2>
+				<p>
+						<strong>We are open from 7:00am to 4:30pm - Monday through Friday</strong>
+				</p>
+		</div>
+	</div>
+</div>
+	<div class="row row-no-margins dark-background align-items-center">
+		<div class="container">
+			<div class="col-md-12  text-center">
+				<p class="text-white py-2 font-weight-bold" style="font-size: 20px;">
+					We'd love to talk to you about our coffees, traceability, and how we can work together! There's so many different
+					ways to get in touch with us, but we like phone calls the most.
+				</p>
 			</div>
-			<div class="col-lg-5 text-center">
-				<div class="card">
-					<div class="card-header">
-						<h4>Reach out to us via this form</h4>
-						<small>We'll get back to you as soon as we can!</small>
-					</div>
-					<div class="card-body">
-						<form method="post" class="text-center">
+		</div>
+	</div>
+
+<div class="container contact-page pt-4">
+	<div class="row align-items-top text-center">
+		<div class="col-lg-4 py-3">
+				<hr />
+				<img src="{% static 'images/location.svg' %}" class="img-responsive rounded" height="70px" width="auto">
+			<h3>Reach Us</h3>
+			<hr />
+			<p class="small text-muted">
+				If you're in the area and lost or actually need to send us documents, this is our physical place of business:
+			</p>
+			<p>
+				<span class="gold-text font-weight-bold">San Cristobal Coffee Importers </span><br>
+				<span class="small">
+						13244 Juanita Drive NE<br> Kirkland, Washington<br> 98034
+				</span>
+			</p>
+		</div>
+		<div class="col-lg-4 py-3">
+				<hr />
+				<img src="{% static 'images/smartphone.svg' %}" class="img-responsive rounded" height="70px" width="auto">
+			<h3>Call Us</h3>
+			<hr />
+			<p class="small text-muted">
+				Have any a question or a specific need? Calling us is the fastest way to get an answer and if we don't pick up, leave us a message and we'll get back to you.
+			</p>
+			<h2 class="gold-text"><strong>(425) 825-9106</strong></h2>
+		</div>
+		<div class="col-lg-4 py-3">
+				<hr />
+				<img src="{% static 'images/email.svg' %}" class="img-responsive rounded" height="70px" width="auto">
+			<h3>Message Us</h3>
+			<hr />
+			<p class="small text-muted">
+				Don't feel like giving us a call?  Use our contact form to send us a detailed message and we'll respond as soon as we can.  And no, we won't use your email for anything other than responding to your inquiry.   
+			</p>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#contactModal">Click here for our Contact Form</button>
+		</div>
+		<!-- Contact form Modal/popup -->
+		<div id="contactModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header text-center">
+				<div class="col-sm-12">
+					<h4 class="gold-text">Contact Form</h4>
+					<small>Fill out this form with your information and staff at Sancristocafe will get back to you soon!</small>
+				</div>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+					<form method="post" class="text-center">
 							<small>
 							{% csrf_token %}
 							{{ form.as_p }}
-						</small>
-							<div class="form-actions">
-								<button type="submit" class="btn-sm btn-primary text-center small">Send</button>
-							</div>
-							<br />
-						</form>
-							<p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>
-					</div>
-					</div>
-			</div>
-		</div>
-	<div class="row justify-content-md-center">
-		<div class="col-lg-12 text-center">
-			<div class="accordion py-2" id="accordionExample">
-					  <div class="card">
-						<div class="card-header card-header-color" id="heading1">
-							<button class="btn btn-link btn-block collasped nounderline" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-							  <h4 class="mb-1 accordian-headers">Other links to check out </h4>
-							</button>
+							</small>
+							<p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>			
+					
+					<div class="form-actions">
+							<button type="submit" class="btn-sm btn-primary text-center small">Send</button>
 						</div>
-
-						<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
-						  <div class="card-body">
-								<p>Under construction...</p>
-									<table class="table table-bordered">
-										<tbody>
-											<tr>
-												<td>
-													TrackYourCoffee
-												</td>
-												<td>
-													Cafe Sustentables de Mexico
-												</td>
-												<td>
-													Grupo Terru&ntildeo Nayarita
-												</td>
-												<td>
-													Finca Lab
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-
-						</div>
-					  </div>
-					</div>
+					</form>
 			</div>
+		  </div>
+	  
 		</div>
-		</div>
-
-
+	  </div>
 	</div>
+</div>
 	<br>
 	<br>
 
