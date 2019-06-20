@@ -169,13 +169,10 @@ a{
 .navbar{
  background:#333333;
  width: 100%;
- position: fixed;
  z-index: 1;
 }
 
-#main {
-padding-top:60px;
-}
+
 
 .navbar-left img{
     height:30px;
