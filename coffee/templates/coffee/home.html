@@ -5,17 +5,19 @@
       <div class="header-of-site">
         <section class="jumbotron text-center">
           <div class="container">
-            <h1 class="jumbotron-heading">San Cristobal Coffee Importers</h1>
-              <h4 class="text-muted">Exclusive Worldwide Distributor of Internet Traceable Mexican Coffee from <a href="http://www.gtnay.com/"><strong>Grupo Terru&ntildeo Nayarita</strong></a></h4>
-            <p>
-              <a href="{%url 'contact'%}" class="btn btn-primary my-2">Contact Us</a>
-            </p>
+              <img src="{% static 'images/sc_wordmark_white_green.png' %}" class="img-fluid" alt="coffee bean">
+
+              <br>
+              <br>
+
             <div class="downArrow bounce">
               <br>
+              <br>
               <a href="#about">
-                  <img width="70" height="50" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
-              </a>
-              </div>
+                  <!--<img width="70" height="50" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" /> -->
+                  <img width="70px" height="auto" src="{% static 'images/down_caret.png' %}">
+                </a>
+            </div>
             <!-- <div class="arrow bounce">
               <a class="fa fa-arrow-down fa-2x" href="#about"></a>
             </div> -->
@@ -28,11 +30,11 @@
 
     <!-- about us section -->
     <div class="about" id="about">
-        <h1 class="text-center">About Us</h1>
+        <h1 class="text-center sc-gold"><a href="{% url 'about' %}">About Us</a></h1>
         <div class="container">
-          <div class="row">
+          <div class="row align-items-center">
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="{% static 'images/coffee_bean_outline.png' %}" class="img-fluid" alt="coffee bean">
+                <img src="{% static 'images/sc_leaf_turquoise.png' %}" class="img-fluid" alt="coffee bean">
               </div>
             <div class="col-lg-8 col-md-8 col-sm-12 desc">
 
@@ -55,99 +57,56 @@
         </div>
     </div>
     <!-- end of about us section -->
-
-
-    <!-- our coffees section -->
-    <div class="coffee">
-      <h1 class="text-center">Our Coffees</h1>
-        <div class="container">
-
-          <div class="row" style="display:block">
-            
-              <div class="accordion mb-5" id="accordionExample">
-            {% for coffee in coffees.all %}
-
-                  <div class="card">
-                    <div class="card-header card-header-color" id="heading{{coffee.id}}">
-                      <h5 class="mb-1">
-                        <button class="btn btn-link btn-block collasped nounderline" style="white-space:normal;" type="button" data-toggle="collapse" data-target="#collapse{{coffee.id}}" aria-expanded="true" aria-controls="collapse{{coffee.id}}">
-                         <h4 class="mb-1 accordian-headers">{{coffee.coffee_name}}</h4><small class="text-muted">{{coffee.origin}}</small>
-                        </button>
-                      </h5>
-                    </div>
-
-                    <div id="collapse{{coffee.id}}" class="collapse" aria-labelledby="heading{{coffee.id}}" data-parent="#accordionExample">
-                      <div class="card-body">
-                        <div class='table-responsive'>
-                        <table class="table table-sm">
-                          <thead>
-                            <th scope="col"></th>
-                            <th scope="col">Origin</th>
-                            <th scope="col">Origin Info</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Availability</th>
-                          </thead>
-                          <tbody>
-
-                          <tr>
-                            <td><img src="{{coffee.image.url}}" class="blog-thumbnail" /></td>
-                            <td>{{coffee.origin}}</td>
-                            <td>{{coffee.origin_info}}</td>
-                            <td>{{coffee.description}}</td>
-                            <td>{{coffee.availability}}</td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              {% endfor %}
-              </div>
-          </div>
+    <div class="row row-no-margins py-2 parchment-break">
+        <div style="height:500px">
         </div>
-    </div>
-    <!-- end of our coffee section -->
-
+      </div>
     <!-- blog/new section -->
     <!-- Posts section -->
     <div class="blog">
-      <h1 class="text-center">Learn more about what we do</h1>
-        <div class="container">
-          <div class="row align-items-top">
-            <div class="col-lg-4">
+      <h1 class="text-center sc-gold">Learn more about what we do</h1>
+          <div class="row row-no-margins align-items-top">
+            <div class="col-lg-3">
 
               <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
                   <h3 class="card-title py-3"><a href="{% url 'source-work' %}" class="text-dark">Our Source Work</a></h3> 
                   <a href="{% url 'source-work' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/cherry_reception_weighing.jpg' %}" alt="Card image cap" /></a>
                   <div class="card-body">
                     <p class="card-text">Being vertically integrated keeps us busy! Learn more about our activities at the source in Nayarita, Mexico</p>
-                    <a href="{% url 'source-work' %}" class="btn-sm btn-primary my-2">Go to Source Work Page</a>
+                    <a href="{% url 'source-work' %}" class="btn btn-sm btn-primary my-2">Go to Source Work Page</a>
                   </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
                   <h3 class="card-title py-3"><a href="{% url 'traceability' %}" class="text-dark">Our Traceability</a></h3>
                   <a href="{% url 'traceability' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/bagtag_traceability.jpg' %}" alt="Card image cap" /></a>
                     <div class="card-body">
                       <p class="card-text">Where does your coffee come from? Tracking coffee back to it's origin is very important to us. Learn more about how we address traceability.</p>
-                      <a href="{% url 'traceability' %}" class="btn-sm btn-primary my-2">Go to Traceability Page</a>
+                      <a href="{% url 'traceability' %}" class="btn btn-sm btn-primary my-2">Go to Traceability Page</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
                     <h3 class="card-title py-3"><a href="{% url 'news' %}" class="text-dark">Our News</h3></a>
                     <a href="{% url 'news' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/group_training2.png' %}" alt="Card image cap" /></a>
                       <div class="card-body">
                         <p class="card-text">We publish monthly newsletters and periodic articles. Find out the latest information on what's happening at San Cristobal Coffee Importers.</p>
-                        <a href="{% url 'news' %}" class="btn-sm btn-primary my-2">Go to News Page</a>
+                        <a href="{% url 'news' %}" class="btn btn-sm btn-primary my-2">Go to News Page</a>
                       </div>
                   </div>
           </div>
-          </div>
+          <div class="col-lg-3">
+            <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+                <h3 class="card-title py-3"><a href="{% url 'news' %}" class="text-dark">Our Coffees</h3></a>
+                <a href="{% url 'news' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/coffee.jpg' %}" alt="Card image cap" /></a>
+                  <div class="card-body">
+                    <p class="card-text">Find out more about our offerings. We carry several micro-lots in our PNW warehouse and routinely have spot offerings of several different origins.</p>
+                    <a href="{% url 'coffees' %}" class="btn btn-sm btn-primary my-2">Go to Our Coffees Page</a>
+                  </div>
+              </div>
+      </div>
           </div>       
     </div>
         <!-- end of news/blog section -->
@@ -155,8 +114,8 @@
 
     <!-- Contact form -->
     <div class="contact-us">
-      <h1 class="text-center">Contact Us</h1>
-     <div class="container">
+      <h1 class="text-center"><a href="{% url 'contact' %}">Contact Us</a></h1>
+     <div class="container text-white">
       <div class="row text-center py-3">
         <div class="col-lg-4"><h4>By Phone</h4>
           <h2><strong>425-825-9106</strong></h2>

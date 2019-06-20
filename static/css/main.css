@@ -33,16 +33,64 @@ body {
 h1{
   font-family: 'Poppins', sans-serif;
   font-weight:bold;
-  color:#ad7b00;
   margin: 0.5em;
+  color:#4f3131!important;
 }
 
 h2, h3, h4, h5{
   font-family: 'Poppins', sans-serif;
 }
 
+.poppins_text{
+  font-family: 'Poppins', sans-serif;
+}
+
 a{
-  color: #ad7b00;
+  color: #ffc857;
+}
+
+.sc-gold {
+  color: #ffc857!important;
+}
+
+.sc-gold-bg {
+  background-color: #ffc857!important;
+}
+
+.sc-green{
+  color:#68b578!important;
+}
+
+.sc-green-bg{
+  background-color:#68b578!important;
+}
+
+.sc-red{
+  color:#ce6c46!important;
+}
+
+.sc-red-bg{
+  background-color:#ce6c46!important;
+}
+
+.sc-blue{
+  color:#076060!important;
+}
+
+.sc-blue-bg{
+  background-color:#076060!important;
+}
+
+.sc-brown{
+  color:#4f3131!important;
+}
+
+.sc-brown-bg{
+  background-color:#4f3131!important;
+}
+
+.sc_brown-bg1{
+  background-color:rgb(79, 49, 49);
 }
 
 .smaller-jumbotron{
@@ -54,11 +102,11 @@ a{
 }
 
 .dark-text {
-  color: #343a40;
+  color: #4f3131;
 }
 
 .gold-text {
-  color: #ad7b00;
+  color: #ffc857;
 }
 
 .site-content{
@@ -112,11 +160,6 @@ a{
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  background-color: #333333;
-}
-
-.footer p {
-    color: #f4f4f4;
 }
 
 .badge{
@@ -138,6 +181,8 @@ padding-top:60px;
     height:30px;
     width:auto;
     padding-right: 2px;
+    -ms-interpolation-mode: bicubic;
+
 }
 
 .navbar-brand{
@@ -152,6 +197,11 @@ padding-top:60px;
 .nav-link{
  margin-right: 1em !important;
 }
+
+.nav-link:hover{
+  font-weight:bold;
+}
+
 .navbar-brand:hover{
  font-weight:bold;
 }
@@ -173,7 +223,7 @@ width:auto;
  background-attachment: fixed;
  background-size: cover;
  background-position: center;
- background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/coffee_cherries.jpg');
+ background-image: linear-gradient(to bottom,rgba(79, 49, 49, 0) 25%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/wet_mill_reception.jpg');
  justify-content:center;
  align-items:center;
  display:flex;
@@ -239,14 +289,14 @@ font-weight:bold;
 }
 
 .btn-primary{
-background: #333333;
+background: #4f3131;
 color: #fff;
-border-color: #333333;
+border-color: #4f3131;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-background-color: #ad7b00;
-border-color: #e09f00;
+background-color: #ce6c46!important;
+border-color: #ce6c46!important;
 }
 
 .row-no-margins{
@@ -260,29 +310,17 @@ border-color: #e09f00;
  padding: 1em;
  position: relative;
 }
-.about h1{
- color:#ad7b00;
- font-weight:bold;
-}
 
 .about img{
     height: inherit;
     width: auto;
-    border-radius: 50%
 }
 
 .about .desc{
  padding: 1em;
- border-left:4px solid #ad7b00;
+ border-left:4px solid #ffc857;
 }
 
-.about .desc h3{
- color: #343a40;
-}
-.about .desc p{
- line-height:1.5;
- color:#888;
-}
 
 .accordian-headers{
    color: #ffffff;
@@ -314,7 +352,7 @@ font-weight: bold;
  margin: 4em 0;
  position: relative;
   padding: 1em;
- background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/green_coffee.jpg');
+ background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.0) 0%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/green_coffee.jpg');
 }
 
 .coffee .coffee_imgs{
@@ -323,16 +361,22 @@ font-weight: bold;
     display: flex;
 }
 
-.coffee h1{
- color:#ad7b00;
- margin: 1em;
- font-weight:bold;
-}
 .coffee img{
   height: 15rem;
   width: auto;
   margin: 1em;
   box-shadow: 0 0 40px #fff;
+}
+
+.parchment-break{
+  background-image: url('/static/images/parchment_patio.jpg');
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ margin: 4em 0;
+ position: relative;
+  padding: 1em;
+ background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.0) 0%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/parchment_patio.jpg');
 }
 
 /*blog and news section*/
@@ -342,11 +386,10 @@ font-weight: bold;
 } */
 
 .blog{
- position: relative;
+  position: relative;
 }
 
 .blog h1{
- color:#ad7b00;
  font-weight:bold;
 }
 
@@ -363,6 +406,11 @@ font-weight: bold;
 
 .card-hover:hover{
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.opaque-card{
+  background-color: rgba(245, 245, 245, 1)!important;
+  opacity: .4!important;
 }
 
 .blog-detail-img{
@@ -428,7 +476,7 @@ color:#ad7b00;
  background-position: center;
  position: relative;
   padding: 1em;
- background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/coffee_warehouse.jpg');
+ background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.0) 0%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/coffee_warehouse.jpg');
 }
 
 .contact-us h1{
@@ -439,6 +487,11 @@ color:#ad7b00;
 
 .contact-page h3 a{
  color: #ad7b00;
+}
+
+.contact-us-mountains{
+ background-image: url('/static/images/sc_icon_leaf.png');
+  background-repeat: repeat-x;
 }
 
 .yellow-hyperlink{
@@ -507,7 +560,7 @@ color:#ad7b00;
 .downArrow{
 	position: inherit;
 	bottom: 45%;
-	left: 50%;
+  left: 50%;
 }
 .bounce {
 	-moz-animation: bounce 3s infinite;

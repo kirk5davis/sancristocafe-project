@@ -51,22 +51,22 @@
     <!-- header home page section -->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top py-3" role="navigation">
-          <a href="{% url 'home' %}" class="navbar-brand navbar-left"  data-toggle="collapse" data-target=".navbar-collapse.show">
-            <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}">
-          San Cristobal Coffee Importers
+        <nav class="navbar navbar-expand-lg navbar-dark sc-blue-bg navbar-fixed-top py-3" role="navigation">
+          <a href="{% url 'home' %}" class="navbar-brand navbar-left text-white align-items-center"  data-toggle="collapse" data-target=".navbar-collapse.show">
+         <img src="{% static 'images/sc_icon_white_green.png' %}">
+         San Cristobal Coffee Importers
         </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup" role='navigation'>
             <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{% url 'about' %}" data-toggle="collapse" data-target=".navbar-collapse.show">about us</a>
-              <a class="nav-item nav-link" href="{% url 'coffees' %}" data-toggle="collapse" data-target=".navbar-collapse.show">our coffees</a>
-              <a class="nav-item nav-link" href="{% url 'source-work' %}" data-toggle="collapse" data-target=".navbar-collapse.show">source work</a>
-              <a class="nav-item nav-link" href="{%url 'news'%}" data-toggle="collapse" data-target=".navbar-collapse.show">news</a>
-              <a class="nav-item nav-link" href="{% url 'traceability' %}" data-toggle="collapse" data-target=".navbar-collapse.show">traceability</a>
-              <a class="nav-item nav-link" href="{%url 'contact'%}" data-toggle="collapse" data-target=".navbar-collapse.show">contact</a>
+              <a class="nav-item nav-link poppins_text text-white" href="{% url 'about' %}" data-toggle="collapse" data-target=".navbar-collapse.show">about us</a>
+              <a class="nav-item nav-link poppins_text text-white" href="{% url 'coffees' %}" data-toggle="collapse" data-target=".navbar-collapse.show">our coffees</a>
+              <a class="nav-item nav-link poppins_text text-white" href="{% url 'source-work' %}" data-toggle="collapse" data-target=".navbar-collapse.show">source work</a>
+              <a class="nav-item nav-link poppins_text text-white" href="{%url 'news'%}" data-toggle="collapse" data-target=".navbar-collapse.show">news</a>
+              <a class="nav-item nav-link poppins_text text-white" href="{% url 'traceability' %}" data-toggle="collapse" data-target=".navbar-collapse.show">traceability</a>
+              <a class="nav-item nav-link poppins_text text-white" href="{%url 'contact'%}" data-toggle="collapse" data-target=".navbar-collapse.show">contact</a>
             </div>
           </div>
         </nav>
@@ -79,24 +79,24 @@
               {% endblock %}
             {% else %}
           <div class="header-of-site">
-            <div class="text-center">
-                <h1 class="dark-text smaller-jumbotron">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
+            <div class="text-center text-white">
+                <h1 class="smaller-jumbotron text-white">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
                 <br>
                 <a href="http://www.sancristocafe.com" class="btn btn-primary">Click here to visit our existing website</a>
                 <br>
                 <br>
                 <h3>Or give us a call: </h3>
                 <br>
-                <h3 class="gold-text-lrg-responsive"><strong>(425) 825-9106</strong></h3>
+                <h3 class="gold-text-lrg-responsive sc-gold"><strong>(425) 825-9106</strong></h3>
             </div>
           </div>
             {% endif %}
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer sc-blue-bg">
       <div class="container pt-2 text-center">
-        <p>&#9400; San Cristobal Coffee Importers {% now "Y" %}<small class="text-muted"><br>
+        <p class="text-white">&#9400; San Cristobal Coffee Importers {% now "Y" %}<small><br>
           <strong>   13244 Juanita Drive NE Kirkland, Washington 98034</strong></small></p>
       </div>
     </footer>
