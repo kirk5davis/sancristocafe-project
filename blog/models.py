@@ -7,7 +7,7 @@ class Blog(models.Model):
 	title = models.CharField(max_length=100)
 	summary = models.CharField(max_length=500)
 	content = models.TextField()
-	created_on = models.DateTimeField(auto_now=True)
+	created_on = models.DateTimeField(blank=False, help_text="This will sort the new posts, the newest one will be featured")
 
 	def __str__(self):
 		return "News - {}".format(self.title)

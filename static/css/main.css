@@ -172,6 +172,9 @@ a{
  z-index: 1;
 }
 
+.black-outline{
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 
 
 .navbar-left img{
@@ -329,10 +332,6 @@ font-weight: bold;
 
 .nounderline{
   text-decoration: none !important;
-}
-
-.card-header-color{
- background-color: #333333;
 }
 
 .about-us h2{
