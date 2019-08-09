@@ -27,7 +27,7 @@
                   <div class="card mx-auto latest-article-background shadow-lg d-inline-block" style="max-width:65%; height:auto;">
                     <!-- <img class="card-img-top blog-thumbnail d-block" src="{{blog.image.url}}" alt="Card image cap" /> -->
                       <div class="card-body">
-                        <h2 class="card-title" style="font-size: 4vw; overflow:hidden;" ><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h2>
+                        <h2 class="card-title black-outline" style="font-size: 4vw; overflow:hidden;" ><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h2>
                         <h3 class="card-text" style="font-size:2vw;"> {{ blog.summary }}</h3>
                         <p>Posted on: </p><small class="text-muted">{{blog.created_on}} </small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
                       </div>
