@@ -2,13 +2,10 @@
 {% load staticfiles %}
 
 {% block content %}
-
+<div class="container-fluid sc-gold-bg py-1 mb-3">
+		<p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> Our Coffees</p>
+	</div>
 <div class="container">
-	<h1 class="text-center pt-3">Our Coffees</h1>
-	<hr class="mb-0" />
-	<p class="small my-1"><a href="{% url 'home' %}" class="yellow-hyperlink">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  Our Coffees</p>
-	<hr class="mt-0"/>
-
 	<div class="row align-items-center">
 		<div class="col-md-9 text-left">
 			<h2 class="">Offerings Direct from Grupo Terru&ntildeo Nayarita</h2>
@@ -82,7 +79,7 @@
 	</div>
 	<br>
 </div>
-<div class="row row-no-margins dark-background">
+<div class="row row-no-margins sc-brown-bg">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6 text-center py-4">

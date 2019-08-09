@@ -1,12 +1,12 @@
 {% extends 'coffee/base.html' %}
 {% load staticfiles %}
 {% block content %}
+<div class="container-fluid sc-gold-bg py-1 mb-3">
+    <p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> About Us</p>
+</div>
+
 <div class="container">
-  <h1 class="text-center pt-3">About Us</h1>
-  <hr class="mb-0" />
-  <p class="small my-1"><a href="{% url 'home' %}"">Home</a>  <img src="
-      {% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" /> About Us</p>
-  <hr class="mt-0" />
+  
   <div class="row align-items-center">
     <div class="col-lg-2 text-center">
       <img src="{% static 'images/sc_oval_turquoise_gold.png' %}" class="img-fluid w-100">
@@ -59,8 +59,7 @@
           </p>
           <a href="mailto:jamesk@sancristocafe.com" class="badge badge-secondary">Connect with James</a>
         </div>
-      </div>
-      
+      </div>   
     </div>
     <div class="col-lg-4 text-center pb-5">
       <div class="row">
@@ -87,7 +86,6 @@
           <a href="mailto:devz@sancristocafe.com" class="badge badge-secondary">Connect with Devorah</a>
         </div>
       </div>
-      
     </div>
     <div class="col-lg-4 text-center pb-5">
       <div class="row">
@@ -111,8 +109,7 @@
             he rejoined the team at the start of 2018.
           </p>
           <p class="text-muted small">
-              <strong>Fun Fact:</strong>  Kenneth Davis spent one year living in a yurt. It snowed a lot that year.
-              
+              <strong>Fun Fact:</strong>  Kenneth Davis spent one year living in a yurt. It snowed a lot that year.           
           </p>
           <a href="mailto:kennyd@sancristocafe.com" class="badge badge-secondary">Connect with Kenneth</a>
         </div>
@@ -125,14 +122,12 @@
       <img src="{% static 'images/parchment_patio.jpg' %}" style="width:100%; height: 250px; object-fit: cover;" />
     </div>
   </div>
-  <br>
-</div>
+<br>
 <div class="container">
   <div class="row text-center">
   <div class="col-lg-12">
     <h1 class="text-center pb-3"><strong>Interested in learning more?</strong></h1>
     <a href="{% url 'contact' %}" class="btn btn-primary my-2">Visit our Contact Us Page</a>
-
     </div>
   </div>
   <br><br>

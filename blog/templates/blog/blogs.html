@@ -2,12 +2,11 @@
 {% load staticfiles %}
 
 {% block content %}
+<div class="container-fluid sc-gold-bg py-1 mb-2">
+		<p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> News</p>
+</div>
 <div class="container">
-	<h1 class="text-center pt-3">News</h1>
-	<hr class="mb-0"/>
-	<p class="small my-1"><a href="{% url 'home' %}">Home</a>  <img src="{% static 'images/coffee_bean_outline_light_gray.png' %}" class="breadcrumb-bean" />  News</p>
-	<hr class="mt-0"/>
-	<h5 class="gold-text text-center"> Coffee never sleeps! Read up on what's happening at San Cristobal and the industry. </h5>
+	<h2 class="sc-brown text-center font-weight-bold"> Coffee never sleeps! Read up on what's happening at San Cristobal and the industry. </h2>
 	          <div class="row">
               <div class="col-lg-12">
                 <div class="text-center" width="80%">
@@ -25,11 +24,11 @@
                       
                       }
                       </style>
-                  <div class="card mx-auto latest-article-background shadow-lg d-block" style="max-width:65%; height:300px;">
+                  <div class="card mx-auto latest-article-background shadow-lg d-inline-block" style="max-width:65%; height:auto;">
                     <!-- <img class="card-img-top blog-thumbnail d-block" src="{{blog.image.url}}" alt="Card image cap" /> -->
                       <div class="card-body">
-                        <h2 class="card-title" style="font-size: 5vh;"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h2>
-                        <h3 class="card-text" style="font-size:3vh;"> {{ blog.summary }}</h3>
+                        <h2 class="card-title" style="font-size: 4vw; overflow:hidden;" ><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h2>
+                        <h3 class="card-text" style="font-size:2vw;"> {{ blog.summary }}</h3>
                         <p>Posted on: </p><small class="text-muted">{{blog.created_on}} </small><a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a>
                       </div>
                   </div>
@@ -45,9 +44,9 @@
                     <div class="swiper-wrapper">
                         {% for blog in blogs|slice:"1:" %}
                         <div class="swiper-slide card d-block">
-                            <div class="card-body">
-                              <h5 class="card-title"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
-                              <p class="card-text"> {{ blog.summary }}</p>
+                            <div class="card-body" style="text-overflow: clip;">
+                              <h5 class="card-title" style="font-size: 2vh;"><a href="{% url 'post_details' blog.id %}"> {{ blog.title }}</a></h5>
+                              <p class="card-text" style="font-size: 2vh;"> {{ blog.summary }}</p>
                               <p class="text-muted small">{{blog.created_on}}  <a href="{% url 'post_details' blog.id %}" class="badge badge-secondary">Read More</a></p>
                             </div>
                         </div>
@@ -63,7 +62,7 @@
 </div>
         
           <div class="row row-no-margins">
-              <div class="col-lg-12 dark-background py-4">
+              <div class="col-lg-12 sc-brown-bg py-4">
                 <img src="{% static 'images/cereza_6_cropped.jpg' %}" style="width:100%"/>
               </div>
           </div>

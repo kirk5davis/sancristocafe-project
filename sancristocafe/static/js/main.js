@@ -16,6 +16,20 @@ var smoothScrolling = function(){
           });
         };
 
+// var smoothImgBackgroundsIE = function(){
+//   if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+//     $('body').on("mousewheel", function (event) {
+//         // remove default behavior
+//         event.preventDefault(); 
+
+//         //scroll without smoothing
+//         var wheelDelta = event.wheelDelta;
+//         var currentScrollPosition = window.pageYOffset;
+//         window.scrollTo(0, currentScrollPosition - wheelDelta);
+//     });
+// }
+// };
+
 var swipeCarousel = function(){
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
@@ -52,6 +66,7 @@ $(document).ready(function(){
   var resize = new resizeHeaderImg();
   var kirk = new smoothScrolling();
   var carousel = new swipeCarousel();
+  // var ieFix = new smoothImgBackgroundsIE();
   // add smooth transitioning between pages
   var transEffect = Barba.BaseTransition.extend({
     start: function start() {
@@ -92,6 +107,7 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, barbaCon
     var scrollEvent = new smoothScrolling();
     var carousel = new swipeCarousel();
     var resize = new resizeHeaderImg();
+    //var ieFix = new smoothImgBackgroundsIE();
 
 });
 

@@ -13,21 +13,56 @@ html {
   scroll-behavior: smooth;
 }
 
-/* *,
-*:before,
-*:after {
-  box-sizing: inherit;
-} */
+.note-editable { font-family: Tahoma; font-size: 16px!important; }
+
+/*Edge*/
+@supports ( -ms-accelerator:true ) 
+{
+    html{
+        overflow: hidden;
+        height: 100%;    
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}
+/*Ie 10/11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+{
+    html{
+        overflow: hidden;
+        height: 100%;    
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
   display: block;
   flex-direction: column;
-  margin-bottom: 50px;
   position: relative;
   margin: 0;
-  padding-bottom: 4rem;
   min-height: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 3rem;
+}
+/*footer debug style*/
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom:0;
+  height: 50px;
+  /* Set the fixed height of the footer here */
+}
+
+#blog-text img{
+  max-width: 100%;
+  height: auto;
 }
 
 h1{
@@ -43,6 +78,18 @@ h2, h3, h4, h5{
 
 .poppins_text{
   font-family: 'Poppins', sans-serif;
+}
+
+.open-sans-text{
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+font{
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+font, span{
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 a{
@@ -153,14 +200,7 @@ a{
     transform: translateY(-15px);
   }
 }
-/*footer debug style*/
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-}
 
 .badge{
   display:inline-table;
@@ -182,7 +222,11 @@ a{
     width:auto;
     padding-right: 2px;
     -ms-interpolation-mode: bicubic;
+}
 
+.footer-img{
+  height:30px;
+  width: auto;
 }
 
 .navbar-brand{
@@ -204,6 +248,10 @@ a{
 
 .navbar-brand:hover{
  font-weight:bold;
+}
+
+.nav-link:onclick{
+  font-weight:bold;
 }
 
 #nav-icon {
@@ -372,7 +420,7 @@ font-weight: bold;
  margin: 4em 0;
  position: relative;
   padding: 1em;
- background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.0) 0%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/parchment_patio.jpg');
+ background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.7) 0%,rgba(244, 244, 244, 0.7) 100%), url('/static/images/parchment_patio.jpg');
 }
 
 /*blog and news section*/
