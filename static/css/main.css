@@ -13,8 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.note-editable { font-family: Tahoma; font-size: 16px!important; }
-
 /*Edge*/
 @supports ( -ms-accelerator:true ) 
 {
@@ -61,8 +59,8 @@ body {
 }
 
 #blog-text img{
-  max-width: 100%;
-  height: auto;
+  width: 100%!important;
+  height: auto!important;
 }
 
 h1{

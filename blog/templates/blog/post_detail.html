@@ -12,9 +12,9 @@
 		<h5 class="text-center py-3">{{post_detail.summary}}</h5>
 		<img src="{{post_detail.image.url}}" class="blog-detail-img responsive-img w-100"/>
 		<div class="row">
-			<div class="col-lg-12 open-sans-text">
-		<p id="blog-text" class='static-font py-3 open-sans-text'> {{post_detail.content | safe}}</p>
-	</div>
+			<div id="blog-text" class="col-lg-12 open-sans-text">
+				<p class='static-font py-3 open-sans-text'> {{post_detail.content | safe}}</p>
+			</div>
 		</div>
 		<hr />
 		<small class="text-muted"><strong>Posted on:</strong> {{post_detail.created_on}}</small>
