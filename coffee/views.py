@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Coffee
+from .models import Coffee, OfferingsList
 from blog.models import Blog
 from blog.models import Newsletter
 
@@ -15,7 +15,8 @@ def about(request):
 def coffees(request):
 	coffees = Coffee.objects.all()
 	coffees_grouped_twos = [coffees[i * 2:(i + 1) * 2] for i in range((len(coffees) + 2 - 1) // 2 )]
-	return render(request, 'coffee/our_coffees.html', {"coffees":coffees_grouped_twos})
+	current_offering_list = OfferingsList.objects.all().order_by('-date_current')[0]
+	return render(request, 'coffee/our_coffees.html', {"coffees":coffees_grouped_twos, "offering_list": current_offering_list})
 
 def source_work(request):
 	latest_newsletter = Newsletter.objects.all().order_by('-vintage')[0]

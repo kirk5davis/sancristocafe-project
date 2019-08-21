@@ -4,8 +4,8 @@
 {% block content %}
 <div class="container-fluid sc-gold-bg py-1 mb-3">
 		<p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> Contact Info</p>
-	</div>
-		<div class="container contact-page">
+</div>
+<div class="container contact-page">
 	<div class="row">
 		<div class="col-lg-12 text-center">
 			<h2 class="font-weight-bold sc-blue">Get in Touch</h2>
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 </div>
-	<div class="row row-no-margins sc-brown-bg align-items-center">
+<div class="row row-no-margins sc-brown-bg align-items-center">
 		<div class="container">
 			<div class="col-md-12  text-center">
 				<p class="text-white py-1 font-weight-bold mb-0" style="font-size: 20px;">
@@ -63,6 +63,11 @@
 			</p>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Click here for our Contact Form</button>
 		</div>
+	</div>
+</div>
+<div class="row row-no-margins">
+		<img class="py-2 rounded img-responsive" height="400px" width="100%" style="object-fit: cover;" src="{% static 'images/cupping_jim.jpg' %}"></img>
+</div>
 		<!-- Contact form Modal/popup -->
 		<div id="contactModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -92,8 +97,6 @@
 	  
 		</div>
 	  </div>
-	</div>
-</div>
 <br>
 <div class="row row-no-margins text-center">
 	<div class="col-lg-12">
@@ -101,6 +104,6 @@
 		<img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
 		<img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
 		<img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
-</div>
+	</div>
 </div>
 {% endblock %}

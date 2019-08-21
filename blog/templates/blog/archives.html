@@ -2,16 +2,18 @@
 {% load staticfiles %}
 
 {% block content %}
+<div style="background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/archives.png');">
 <div class="container-fluid sc-gold-bg py-1">
     <p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> Archives</p>
 </div>
-		<div class="row row-no-margins archive-header text-center" style="background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/archives.png');">
-				<h1 class="sc_blue" style="font-size: 6vw;   text-shadow: 5px 5px 10px white, 0 0 25px white, 0 0 5px white; ">The Archives</h1>
-      </div>
-  <div class="container">
+<div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-	<p><strong>Explore historical write-ups and thought provoking articles, still relevant over 10 years later</strong></p>
+        <h1 class="sc-gold black-outline">Welcome to the Archives</h2>
+  <p><strong>Explore historical write-ups and thought provoking articles, still relevant over 10 years later</strong></p>
+  <p><strong>If you have any questions about something you find here, just reach out to us!</strong></p>
+  <a class="btn btn-primary mb-4" href="{% url 'contact' %}">Contact Us</a>
+  <br>
 		<div class="accordion" id="accordionExample">
                   <div class="card">
                     <div class="card-header sc-blue-bg" id="heading1">
@@ -91,5 +93,13 @@
 
 <br>
 <br>
-
+<div class="row row-no-margins text-center">
+    <div class="col-lg-12">
+      <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
+      <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
+      <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
+      <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
+    </div>
+  </div>
+</div>
 {% endblock %}

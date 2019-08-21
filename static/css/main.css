@@ -367,6 +367,10 @@ background-color: #ce6c46!important;
 border-color: #ce6c46!important;
 }
 
+.btn-white-outline{
+  border-color: white;
+}
+
 .row-no-margins{
   margin-left: 0px;
   margin-right: 0px;

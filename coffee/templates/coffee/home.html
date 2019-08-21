@@ -31,7 +31,7 @@
 
     <!-- about us section -->
     <div class="about" id="about">
-        <h1 class="text-center sc-gold"><a href="{% url 'about' %}">About Us</a></h1>
+        <h1 class="text-center sc-gold black-outline"><a href="{% url 'about' %}">About Us</a></h1>
         <div class="container">
           <div class="row align-items-center">
               <div class="col-lg-4 col-md-4 col-sm-12">
@@ -61,16 +61,29 @@
     <div class="row row-no-margins py-2 parchment-break">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center align-items-center pt-4 form-group" style="height:500px" >
+          <div class="col-lg-12 text-center align-items-center pt-4" style="height:50%;" >
               <h2 class="dark-text font-weight-bold"> Track the origin of our coffees using our traceability tool: <br> </h2>
-              <input class="form-control input-lg" style="font-size:24px;" type="text" id="coffee_id" />
+                <div class="form-group">
+              <input class="form-control" type="text" id="coffee_id" />
               <a class="form-control btn btn-primary my-2" href="http://trackyourcoffee.com/tracker?entry=" target="_blank" onclick="window.open($(this).attr('href')+$('#coffee_id').val()); return false;">Look up bag tag</a>      
-              <p class="form-text text-dark">
-                  Input a bag-tag to view the origin information - EX: GTN3702004
-                </p>
-                <a class="sc-red" href="http://www.trackyourcoffee.com">TrackYourCoffee.com</a>
-              <!-- <a class="btn btn-primary my-2" href="http://trackyourcoffee.com/tracker?entry=" target="_blank" onclick="document.location.href = $(this).attr('href')+$('#coffee_id').val(); return false;">Look up bag tag</a>       -->
+            </div>
+              <p class="font-weight-bold sc-brown" >Type in a bag tag # above or click a sample bag tag # below to see how we define traceability:</p>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span><img src="{% static 'images/sc-logos/sc_icon_white_green.png' %}" style="height: 20px;width: auto"> </span>Example bag tags
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="http://www.trackyourcoffee.com/tracker?entry=GTN3702003" target="_blank">GTN3702003</a>
+                    <a class="dropdown-item" href="http://www.trackyourcoffee.com/tracker?entry=GTN3702004" target="_blank">GTN3702004</a>
+                    <a class="dropdown-item" href="http://www.trackyourcoffee.com/tracker?entry=GTN3702007" target="_blank">GTN3702007</a>
+                  </div>
+                </div>
+                <br>
+                <a class="font-weight-bold sc-red" href="http://www.trackyourcoffee.com" target="_blank">For more information visit TrackYourCoffee.com</a> or <a class="btn btn-primary btn-sm" href="{% url 'contact' %}">Contact Us</a>
           </div> 
+          <div class="col-lg-12">
+
+          </div>
           </div>
       </div>
         
@@ -78,7 +91,7 @@
     <!-- blog/new section -->
     <!-- Posts section -->
     <div class="blog">
-      <h1 class="text-center sc-gold">Learn more about what we do</h1>
+      <h1 class="text-center sc-gold black-outline">Learn more about what we do</h1>
           <div class="row row-no-margins align-items-top">
             <div class="col-lg-3">
 
@@ -110,7 +123,7 @@
           </div>
           <div class="col-lg-3">
             <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
-                <h3 class="card-title py-3"><a href="{% url 'news' %}" class="text-dark">Our Coffees</h3></a>
+                <h3 class="card-title py-3"><a href="{% url 'coffees' %}" class="text-dark">Our Coffees</h3></a>
                 <a href="{% url 'news' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/coffee.jpg' %}" alt="Card image cap" /></a>
                   <div class="card-body">
                     <p class="card-text small">Find out more about our offerings. We carry several micro-lots in our PNW warehouse and routinely have spot offerings of several different origins.</p>
@@ -124,7 +137,7 @@
 
     <!-- Contact form -->
     <div class="contact-us">
-      <h1 class="text-center"><a href="{% url 'contact' %}">Contact Us</a></h1>
+      <h1 class="text-center black-outline"><a href="{% url 'contact' %}">Contact Us</a></h1>
      <div class="container text-white black-outline">
       <div class="row text-center py-3">
         <div class="col-lg-4"><h4>By Phone</h4>

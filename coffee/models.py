@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 # coffees that san cristobal offers
 class Coffee(models.Model):
@@ -11,4 +12,9 @@ class Coffee(models.Model):
 	def __str__(self):
 		return "Coffee - {}".format(self.coffee_name)
 
+class OfferingsList(models.Model):
+	date_current = models.DateField(blank=False, help_text="This date will show on the web site as the 'current as of' date and the newest file will be linked to on the website.")
+	pdf_file = models.FileField(upload_to='offering_lists/', validators=[FileExtensionValidator(allowed_extensions=['pdf'])], help_text="This will only accept PDF files!")
 
+	def __str__(self):
+		return "Offering List - {}".format(self.date_current)
