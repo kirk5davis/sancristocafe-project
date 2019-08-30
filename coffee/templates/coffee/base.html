@@ -88,23 +88,8 @@
     <div id="barba-wrapper">
       <div class="barba-container">
         <div role="main" id="main">
-            {% if user.is_authenticated %}
               {% block content %}
               {% endblock %}
-            {% else %}
-          <div class="header-of-site">
-            <div class="text-center text-white">
-                <h1 class="smaller-jumbotron text-white black-outline">San Cristobal Coffee Importers <small>is working on their new website...</small> </h1>
-                <br>
-                <a href="http://www.sancristocafe.com" class="btn btn-primary">Click here to visit our existing website</a>
-                <br>
-                <br>
-                <h3>Or give us a call: </h3>
-                <br>
-                <h3 class="gold-text-lrg-responsive sc-gold black-outline"><strong>(425) 825-9106</strong></h3>
-            </div>
-          </div>
-            {% endif %}
         </div>
       </div>
     </div>
