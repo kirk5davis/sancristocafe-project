@@ -295,7 +295,7 @@ width:auto;
  background-attachment: fixed;
  background-size: cover;
  background-position: center;
- background-image: linear-gradient(to bottom,rgba(79, 49, 49, 0) 25%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/wet_mill_reception.jpg');
+ background-image: linear-gradient(to bottom,rgba(79, 49, 49, 0) 25%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/wet_mill_reception_reduced.jpg');
  justify-content:center;
  align-items:center;
  display:flex;

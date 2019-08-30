@@ -20,7 +20,7 @@ class Coffee(models.Model):
 			new_width = 800
 			img.thumbnail((new_width, new_width * self.image.height / self.image.width), Img.ANTIALIAS)
 			output = BytesIO()
-			img.save(output, format='JPEG', quality=70)
+			img.save(output, format='JPEG', quality=80)
 			output.seek(0)
 			self.image= InMemoryUploadedFile(output,'ImageField', "%s.jpg" %self.image.name.split('.')[0], 'image/jpeg', output.write, None)
 		super(Coffee, self).save(*args, **kwargs)
