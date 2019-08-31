@@ -8,7 +8,12 @@
 
 
 <div class="container">
-	<h2 class="sc-brown text-center font-weight-bold">Current Offerings: <em class="sc-red" style="font-size: 0.7rem;">updated on&nbsp{{offering_list.date_current}}</em></h2>
+	<div class="row align-items-center">
+		<div class="col-sm-12 text-center">
+				<h2 class="sc-brown font-weight-bold">- Select Nayarit Offerings -</h2>
+			</div>
+	</div>
+	
 	<div class="row">
 			
 			{% for coffee_group in coffees %}
@@ -25,25 +30,30 @@
 				{% endfor %}
 			{% endfor %}
 		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<a href="{{ offering_list.pdf_file.url }}" target="_blank" class="btn btn-primary btn-lg mt-3"><span><img src="{% static 'images/sc-logos/sc_icon_white_green.png' %}" style="height: 20px;width: auto"> </span>Offer List</a><br>
+				<small class="pt-0">Current as of: <strong class="sc-red">{{offering_list.date_current}}</strong></small>
+			</div>
+			</div>
 		</div>
-	</div>
 
 <div class="row row-no-margins sc-brown-bg align-items-center py-4 my-4">
 			<div class="col-md-4 text-center">
 				<img class="ml-3 py-2 figure-img" width="auto" height="300px" src="{% static 'images/other-logos/grupo_terruno_nayarita.jpg' %}"></img>
-				<small><figcaption class="text-light figure-caption font-weight-bold py-0">Support sustainable agriculture, Support GTNay</figcaption></small>
+				<small><figcaption class="text-light figure-caption font-weight-bold py-0">Support Sustainable Agriculture, Support GTNay</figcaption></small>
 			</div>
 			<div class="col-md-8 text-left pt-2">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h2 class="font-weight-bold sc-gold"> What makes Grupo Terruno Nayarita coffee special? </h2>
+						<h2 class="font-weight-bold sc-gold"> What makes Grupo Terru&ntilde;o Nayarita coffee special? </h2>
 					</div>
 					<div class="col-lg-12 text-white">
 						<ul>
-							<li>Direct Payment to Farmers = Direct trade</li>
-							<li>Certified quality analysis from Cafe Sustentables de Mexico</li>
+							<li>Direct Payment to Farmers = Direct Trade</li>
+							<li>Certified quality analysis from Cafes Sustentables de Mexico</li>
 							<li>100% traceable with <a href="www.trackyourcoffee.com" target="_blank">TrackYourCoffee.com</a> w/ scannable bag tags on each bag</li>
-							<li>Varying microlot cup profile: fruity/raspberry/stonefruit to creamy chocolate/caramel/cherry.</li>
+							<li>Varying microlot cup profile: fruity/raspberry/stonefruit to creamy chocolate/caramel/cherry</li>
 							<li>Grades 1-3 depending on needs (Reserva and Selecta)</li>
 						</ul>
 					</div>
@@ -56,24 +66,22 @@
 <div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-			<h2 class="sc-brown text-center font-weight-bold">Looking for other origins?</h2>
+			
 			<img class="py-2 rounded img-responsive" height="500px" width="100%" style="object-fit: cover;" src="{% static 'images/coffee_farmers_truck.jpg' %}"></img>
-		
+			<h2 class="sc-brown text-center font-weight-bold">Looking for other origins?</h2>
 		</div>
 		</div>
-</div>
-<br>
-<div class="container">
+
 	<div class="row">
 		<div class="col-lg-12 text-center">
 			<p class="text-left">
 					We have access to several different origins through industry partners. If you have a a specific need outside of our Specialty, Direct-trade Mexican coffees do not hesistate to ask! We'll check availability and get you pricing same day. We routinely have spot offerings of Brazilian, Colombia, Indonesian, and various Centrals.			</p>
 				<hr />
-					<h4 class="gold-text my-4">
+					<h4 class="sc-red my-4">
 					Download our latest coffee offering list:<br>
-					<a href="{{ offering_list.pdf_file.url }}" target="_blank" class="btn btn-primary my-2"><span><img src="{% static 'images/sc-logos/sc_icon_white_green.png' %}" style="height: 20px;width: auto"> </span>Offering List</a><br>
-					<small>Current as of: <strong class="sc-red">{{offering_list.date_current}}</strong></small>
-				</h4>
+					<a href="{{ offering_list.pdf_file.url }}" target="_blank" class="btn btn-primary btn-lg my-2"><span><img src="{% static 'images/sc-logos/sc_icon_white_green.png' %}" style="height: 20px;width: auto"> </span>Offer List</a><br>
+					<small>Current as of: <strong class="sc-gold">{{offering_list.date_current}}</strong></small>
+					</h4>
 				<hr />
 			<p>
 				Call, email or fill out our contact form to find out if we have what you're looking for:

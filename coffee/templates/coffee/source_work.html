@@ -10,13 +10,16 @@
 			<div class="col-lg-4">
 				<figure class="figure">
 					<img src="{% static 'images/jim_kosalos.jpg' %}" class="figure-img img-fluid rounded w-100">
-					<figcaption class="figure-caption"><small>James in Malinal with Christian Wolther</small></figcaption>
+					<figcaption class="figure-caption pb-0"><small>James Kosalos and his infamous <em>El Bocho Rojo</em></small></figcaption>	
+					<div class="btn-group d-flex py-3" role="group">
+							<a href="#current-newsletter" class="btn btn-primary w-100"><span><img src="{% static 'images/sc-logos/sc_icon_white_green.png' %}" style="height: 20px;width: auto"> </span> View our latest newsletter</a>
+						</div>
 				</figure>
+				
 			</div>
 			<div class="col-lg-8">
-				<div class="btn-group d-flex py-1" role="group">
-					<a href="#current-newsletter" class="btn btn-primary w-100">Click here to view our latest newsletter</a>
-				</div>
+				
+				<h2 class="sc-brown font-weight-bold text-center">HUMBLE BEGINNINGS</h2>
 				<p>
 					In 1993, James Kosalos, then geophysicist, started working with coffee growers in Nayarit, Mexico.
 				</p>
@@ -35,6 +38,7 @@
 				</blockquote>
 			</div>
 			<div class="col-lg-12">
+				<h2 class="sc-brown text-center font-weight-bold">Process Improvement and Science-based Approach</h2>
 				<p>
 				James theorized that unbiased, science-based process controls would help growers improve their coffee quality and
 				consistency, growing away from the commodity market and into the specialty arena. San Cristobal Coffee Importers
@@ -46,9 +50,10 @@
 			</p>
 			</div>
 			<div class="col-lg-12 py-2">
-				<img src="{% static 'images/gtnay_flow_pic.jpg' %}" class="img-fluid rounded">
+				<img src="{% static 'images/gtnay_flow_pic_resize.png' %}" class="img-fluid rounded">
 			</div>
 			<div class="col-lg-12">
+					<h2 class="sc-brown py-2 text-center font-weight-bold">Cooperation is Key</h2>
 				<p>
 					Today, San Cristobal is vertically integrated at source with Grupo Terruno Nayarita, an organized group of coffee
 					producing societies across 5 different community. The group is constantly growing, developing economy of scale
@@ -61,22 +66,22 @@
 				</p>
 			</div>
 			<div class="col-lg-12 text-center">
-				<h2 class="gold-text py-2">Coffee Quality Management for Producer Centric Sustainablity</h2>
+				<h2 class="sc-brown py-2  font-weight-bold">Coffee Quality Management for Producer-Centric Sustainablity</h2>
 			</div>
 			<div class="col-lg-5">
 				<p>
-					Cafe Sustentables de Mexico, in Tepic, Nayarit, serves as the administrative arm of Grupo Terruno Nayarita. James
-					Kosalos founded CSM in XXXX to close the gap separating coffee producers from their exportable product. They own and
+					<a class="sc-red font-weight-bold" href="www.cafesumex.com" target="_blank">Cafe Sustentables de Mexico</a>, in Tepic, Nayarit, serves as the administrative arm of Grupo Terruno Nayarita. James
+					Kosalos founded CSM in 2003 to close the gap separating coffee producers from their exportable product. They own and
 					operate the best dry mill in all of Nayarit.
 				</p>
 				<p class="dark-text"><strong>CSM serves Grupo Terruno Nayarita with:</strong></p>
 				<ul class="list-group list-group-flush">
 				<small>
-					<li class="list-group-item">Evaluation and producer feedback on daily patio lots (Q-grading/cupping);</li>
-					<li class="list-group-item">Maintain export documentation and Fincalab database, linking to <a href="http://www.trackyourcoffee.com" target="_blank" class="gold-text">TrackYourCoffee</a>;</li>
-					<li class="list-group-item">Coordinate and host producer meetings and trainings;</li>
-					<li class="list-group-item">Provide fiscal management and corporate record;</li>
-					<li class="list-group-item">Host Ecotours and visiting roasters/importers;</li>
+					<li class="list-group-item">Evaluation and producer feedback on daily patio lots (Q-grading/cupping)</li>
+					<li class="list-group-item">Maintain export documentation and Fincalab database, linking to <a class="sc-red font-weight-bold" href="http://www.trackyourcoffee.com" target="_blank" class="gold-text">TrackYourCoffee</a></li>
+					<li class="list-group-item">Coordinate and host producer meetings and trainings</li>
+					<li class="list-group-item">Provide fiscal management and corporate record</li>
+					<li class="list-group-item">Host Ecotours and visiting roasters/importers</li>
 				</small>
 				</ul>
 			</div>
@@ -121,7 +126,7 @@
 		</div>
 		<div class="row" id='current-newsletter'>
 			<div class="col-lg-12 text-center">
-				<h2 class="gold-text">Check out our latest newsletter from CSM</h2>
+				<h2 class="sc-brown text-center font-weight-bold">Check out our latest newsletter from CSM</h2>
 			</div>
 			<div class="col-lg-12">
 				<p>{{ newsletter.title }}: <small class="text-muted">{{ newsletter.brief_summary }}</small></p>
