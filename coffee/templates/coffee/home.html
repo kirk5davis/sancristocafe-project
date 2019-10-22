@@ -34,10 +34,10 @@
         <h1 class="text-center sc-gold black-outline"><a href="{% url 'about' %}">About Us</a></h1>
         <div class="container">
           <div class="row align-items-center">
-              <div class="col-lg-4 col-md-4 col-sm-12">
+              <div data-aos="fade-left" data-aos-duration="1000" class="col-lg-4 col-md-4 col-sm-12">
                 <img src="{% static 'images/sc-logos/sc_leaf_turquoise.png' %}" class="img-fluid" alt="coffee bean">
               </div>
-            <div class="col-lg-8 col-md-8 col-sm-12 desc">
+            <div data-aos="fade-right" data-aos-duration="1000" class="col-lg-8 col-md-8 col-sm-12 desc">
 
               <h3>San Cristobal Coffee Importers</h3>
                  <p>
@@ -67,7 +67,7 @@
     <!-- end of about us section -->
     <div class="row row-no-margins py-2 parchment-break">
       <div class="container">
-        <div class="row">
+        <div data-aos="fade-left" data-aos-duration="1000" class="row py-4">
           <div class="col-lg-12 text-center align-items-center pt-4" style="height:50%;" >
               <h2 class="dark-text font-weight-bold"> Track the origin of our coffees using our traceability tool: <br> </h2>
                 <div class="form-group">
@@ -102,7 +102,7 @@
           <div class="row row-no-margins align-items-top">
             <div class="col-lg-3">
 
-              <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+              <div data-aos="fade-left"  data-aos-duration="2000" class="card text-center card-hover p-3 mb-5 bg-white rounded">
                   <h3 class="card-title py-3"><a href="{% url 'source-work' %}" class="text-dark">Source Work</a></h3> 
                   <a href="{% url 'source-work' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/cherry_reception_weighing.jpg' %}" alt="Card image cap" /></a>
                   <div class="card-body">
@@ -111,7 +111,7 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+              <div data-aos="fade-right"  data-aos-duration="2000" class="card text-center card-hover p-3 mb-5 bg-white rounded">
                   <h3 class="card-title py-3"><a href="{% url 'traceability' %}" class="text-dark">Traceability</a></h3>
                   <a href="{% url 'traceability' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/bagtag_traceability.jpg' %}" alt="Card image cap" /></a>
                     <div class="card-body">
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+                <div data-aos="fade-left"  data-aos-duration="2000" class="card text-center card-hover p-3 mb-5 bg-white rounded">
                     <h3 class="card-title py-3"><a href="{% url 'news' %}" class="text-dark">News</h3></a>
                     <a href="{% url 'news' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/group_training2.png' %}" alt="Card image cap" /></a>
                       <div class="card-body">
@@ -129,7 +129,7 @@
                   </div>
           </div>
           <div class="col-lg-3">
-            <div class="card text-center card-hover p-3 mb-5 bg-white rounded">
+            <div data-aos="fade-right"  data-aos-duration="2000" class="card text-center card-hover p-3 mb-5 bg-white rounded">
                 <h3 class="card-title py-3"><a href="{% url 'coffees' %}" class="text-dark">Our Coffees</h3></a>
                 <a href="{% url 'coffees' %}"><img class="card-img-top blog-thumbnail" src="{% static 'images/coffee.jpg' %}" alt="Card image cap" /></a>
                   <div class="card-body">
@@ -158,7 +158,6 @@
         </div>
       </div>
     </div>
-
     </div>
-
+    
 {% endblock %}
