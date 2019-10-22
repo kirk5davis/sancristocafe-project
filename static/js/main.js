@@ -112,6 +112,7 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, barbaCon
 });
 
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container){
+  AOS.init();
 });
 
 });
