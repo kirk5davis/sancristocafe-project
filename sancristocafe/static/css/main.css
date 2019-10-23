@@ -421,6 +421,14 @@ font-weight: bold;
   height: 250px;
 }
 
+.contact-us-cupping-img{
+  background-image: url('/static/images/cupping_jim.jpg');
+  background-size: cover;
+  background-position: center;
+  width:100%; 
+  height: 400px;
+}
+
 /*Portfolio*/
 .coffee{
  background-image: url('/static/images/green_coffee.jpg');
