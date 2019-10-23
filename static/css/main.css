@@ -292,7 +292,6 @@ width:auto;
 
 /*header style*/
 .header-of-site{
- background-attachment: fixed;
  background-size: cover;
  background-position: center;
  background-image: linear-gradient(to bottom,rgba(79, 49, 49, 0) 25%,rgba(244, 244, 244, 0.0) 100%), url('/static/images/wet_mill_reception_reduced.jpg');
@@ -302,7 +301,6 @@ width:auto;
 }
 
 .archive-header{
-  background-attachment: fixed;
   background-size: auto;
   background-position: center;
   justify-content:center;
@@ -415,10 +413,25 @@ font-weight: bold;
   font-weight: bold;
 }
 
+.about-us-parchment-img{
+  background-image: url('/static/images/parchment_patio.jpg');
+  background-size: cover;
+  background-position: center;
+  width:100%; 
+  height: 250px;
+}
+
+.contact-us-cupping-img{
+  background-image: url('/static/images/cupping_jim.jpg');
+  background-size: cover;
+  background-position: center;
+  width:100%; 
+  height: 400px;
+}
+
 /*Portfolio*/
 .coffee{
  background-image: url('/static/images/green_coffee.jpg');
- background-attachment: fixed;
  background-size: cover;
  background-position: center;
  margin: 4em 0;
@@ -442,7 +455,6 @@ font-weight: bold;
 
 .parchment-break{
   background-image: url('/static/images/parchment_patio.jpg');
- background-attachment: fixed;
  background-size: cover;
  background-position: center;
  margin: 4em 0;
@@ -543,7 +555,6 @@ color:#ad7b00;
 
 .contact-us{
  background-image: url('/static/images/coffee_warehouse.jpg');
- background-attachment: fixed;
  background-size: cover;
  background-position: center;
  position: relative;
