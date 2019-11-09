@@ -429,6 +429,13 @@ font-weight: bold;
   height: 400px;
 }
 
+.background-circle-img-ie-fix{
+  background-size: cover;
+  background-position: center;
+  width:100%; 
+  height: 400px;
+}
+
 /*Portfolio*/
 .coffee{
  background-image: url('/static/images/green_coffee.jpg');
