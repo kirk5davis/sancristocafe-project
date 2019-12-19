@@ -432,7 +432,7 @@ font-weight: bold;
 .background-circle-img-ie-fix{
   background-size: cover;
   background-position: center;
-  width:100%; 
+  width:auto; 
   height: 400px;
 }
 
