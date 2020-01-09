@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
     'django_summernote',
+    'captcha',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +146,14 @@ SUMMERNOTE_CONFIG = {
 }
 
 SUMMERNOTE_THEME = 'bs4'  # bootstrap 4 summernote theme
+
+# recaptcha keys
+RECAPTCHA_PUBLIC_KEY = 'sancristocafe'
+RECAPTCHA_PRIVATE_KEY = 'sancristocafe'
+CAPTCHA_IMAGE_SIZE = (200,100)
+CAPTCHA_FONT_SIZE = 56
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 try:
     from .local_settings import *

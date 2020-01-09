@@ -13,6 +13,7 @@ admin.site.index_title = "Welcome to San Cristobal Coffee Importers Website Admi
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+    path('captcha/', include('captcha.urls')),
     path('', coffee.views.home, name='home'),
     path('about/', coffee.views.about, name='about'),
     path('coffees/', coffee.views.coffees, name='coffees'),

@@ -1,5 +1,6 @@
 {% extends 'coffee/base.html' %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container-fluid sc-gold-bg py-1 mb-3">
@@ -59,9 +60,9 @@
 			<h3>Message Us</h3>
 			<hr />
 			<p class="small text-muted">
-				Don't feel like giving us a call?  Use our contact form to send us a detailed message and we'll respond as soon as we can.  And no, we won't use your email for anything other than responding to your inquiry.   
+				Don't feel like giving us a call?  Use our contact form below to send us a detailed message and we'll respond as soon as we can.  And no, we won't use your email for anything other than responding to your inquiry.   
 			</p>
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Click here for our Contact Form</button>
+			<a href="#contact_form" class="btn btn-primary font-weight-bold">Go to the contact form</a>
 		</div>
 	</div>
 </div>
@@ -69,6 +70,51 @@
 	<div class="contact-us-cupping-img py-2">		
 	</div>
 </div>
+<div id="contact_form" class="container contact-page my-4 border bg-light rounded">
+	<div class="row">
+			<div class="col-sm-12 py-3">
+					<h2 class="gold-text">Contact Form</h4>
+					<p>Fill out this form with your information and staff at Sancristocafe will get back to you soon!</p>
+			</div>
+		<div class="col-sm-12 py-3">
+
+				<form method="POST">
+						{% csrf_token %}
+						<div  id="fail_anchor" class="row">
+							<div class="col-sm-6">
+									{{ form.name|as_crispy_field }}
+							</div>
+							<div class="col-sm-6">
+									{{ form.email|as_crispy_field }}
+							</div>
+							<div class="col-sm-12">
+									{{ form.message|as_crispy_field }}
+							</div>
+							{% if message == 'failed' %}
+							<div class="col-sm-12 alert alert-danger alert-dismissible fade show">
+									<strong>Error!</strong> You failed our CAPTCHA challenge please try again.
+									<button type="button" class="close" data-dismiss="alert">&times;</button>
+							</div>
+							{% endif %}
+							<div class="col-sm-6">
+									{{ form.are_you_a_human|as_crispy_field }}
+							</div>
+						</div>
+						
+						<p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>			
+				
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary text-center font-weight-bold">Send to <span><img src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}" style="height: 20px;width: auto"> </span></button>
+					</div>
+				</form>
+
+		</div>
+
+
+	</div>
+
+</div>
+
 		<!-- Contact form Modal/popup -->
 		<div id="contactModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -82,14 +128,12 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 			<div class="modal-body">
-					<form method="post" class="text-center">
-							<small>
+					<form method="post">
 							{% csrf_token %}
-							{{ form.as_p }}
-							</small>
+							{{ form|crispy }}
 							<p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>			
 					
-					<div class="form-actions">
+						<div class="form-actions">
 							<button type="submit" class="btn-sm btn-primary text-center small">Send</button>
 						</div>
 					</form>
@@ -107,4 +151,11 @@
 		<img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" width="20%">
 	</div>
 </div>
+{% if form_anchor %}
+<script type='text/javascript'>
+	$(document).ready(function(){
+		window.location = '#{{ form_anchor }}'
+	});
+</script>
+{% endif %}
 {% endblock %}
