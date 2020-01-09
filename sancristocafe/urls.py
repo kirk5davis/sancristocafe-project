@@ -11,7 +11,7 @@ admin.site.site_title = "San Cristobal Coffee Importers Web Administration"
 admin.site.index_title = "Welcome to San Cristobal Coffee Importers Website Admin Page"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('scci_admin_portal/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('captcha/', include('captcha.urls')),
     path('', coffee.views.home, name='home'),
