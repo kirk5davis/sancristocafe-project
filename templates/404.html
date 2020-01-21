@@ -1,0 +1,16 @@
+{% extends 'coffee/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<h1 class="text-center pt-3">Thank you for reaching out to us!</h1>
+	<h3 class='text-center'>One of our staff will be responding to you shortly...</h3>
+	<div class="text-center">
+		<br/>
+		<img src="{% static 'images/icons/flying_email.gif' %}" class="text-center" height="250px" width="auto"/>
+		<br/>
+		<br/>
+		<a href="{% url 'home' %}" class="btn btn-primary text-center">Return to homepage</a>
+	</div>
+	<br/>
+	<br/>
+{% endblock %}

@@ -25,7 +25,7 @@ def emailView(request):
             return render(request, "contact/success.html")
         else:
             # there is an issue with the captcha form
-           form_anchor = "fail_anchor"
+           form_anchor = "contact_form"
            message = "failed"
     return render(request, "contact/contact-us.html", {'form': form, 'form_anchor':form_anchor, 'message':message})
 
