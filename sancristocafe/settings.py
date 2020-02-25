@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3ppaji)327zes65fy0b-&m7e7s(m_j5*pw+7$ji9*8_@tg+&e4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -148,11 +148,10 @@ SUMMERNOTE_CONFIG = {
 SUMMERNOTE_THEME = 'bs4'  # bootstrap 4 summernote theme
 
 # recaptcha keys
-RECAPTCHA_PUBLIC_KEY = 'sancristocafe'
-RECAPTCHA_PRIVATE_KEY = 'sancristocafe'
 CAPTCHA_IMAGE_SIZE = (200,100)
 CAPTCHA_FONT_SIZE = 56
 
+# crispy forms template
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 try:
