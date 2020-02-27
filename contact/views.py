@@ -4,7 +4,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.conf import settings
 from .forms import ContactForm
-
+from .utils import send_html_mail
+import time
 
 def emailView(request):
     if request.method == 'GET':
@@ -18,7 +19,17 @@ def emailView(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
-                send_mail("New message from - {}".format(name), message, email, ['admin@example.com'])
+                text = "<h2 style='color: red;'> <small>New message from the sancristocafe.com contact-us form! </small><br> \
+                        {0} is reaching out to us...</h2>\
+                            <p>************************************************************</p>\
+                            <p><b>Name:</b> {0}</p> \
+                            <p><b>Email:</b> {2}</p>   \
+                            <p><b>Message Content: </b> <br>{3}<br></p> \
+                            <p>************************************************************</p>\
+                                <p><small> This contact form was submitted at {1} <br> \
+                                <b>be sure to follow-up and have a great day! <br>--your sancristocafe.com site </small> </b></p> \
+                                     ".format(name, time.ctime(), email, message)
+                send_html_mail("[NOTICE] sancristocafe.com contact-us form submission from: {}".format(name), text, ['kirk5davis@gmail.com'], settings.EMAIL_HOST_USER)
                 form.save()
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
