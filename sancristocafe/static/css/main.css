@@ -172,6 +172,10 @@ a{
   background-color: #333333;
 }
 
+.light-grey-bg{
+  background-color: #CDCDCD;
+}
+
 .dark-text {
   color: #4f3131;
 }

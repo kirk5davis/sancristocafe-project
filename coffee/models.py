@@ -34,3 +34,12 @@ class OfferingsList(models.Model):
 
 	def __str__(self):
 		return "Offering List - {}".format(self.date_current)
+
+class Banner(models.Model):
+	banner_title = models.CharField(max_length=100, help_text="Write out exactly how you would like it to show on the banner, be sure to include 'click here'!")
+	page_title = models.CharField(max_length=100, help_text="Write out exactly how you would like it to show as a title on the modal page!")
+	content = models.TextField()
+	is_live = models.BooleanField(help_text="Check this box to show the banner on the website!")	
+
+	def __str__(self):
+		return "Banner Item - {}".format(self.banner_title)

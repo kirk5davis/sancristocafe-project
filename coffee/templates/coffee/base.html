@@ -72,7 +72,11 @@
   <body>
 
     <!-- header home page section -->
-
+      {% if banner.is_live %}
+        <div class="banner sc-brown-bg text-center">
+            <p class="mb-0 small"><a class="text-light open-sans-text" href="#bannerModal" data-toggle="modal" data-target="#bannerModal">{{banner.banner_title}}</a></p>
+        </div>
+      {% endif %}      
         <nav class="navbar navbar-expand-xl navbar-dark sc-blue-bg navbar-fixed-top py-3" role="navigation">
           <a href="{% url 'home' %}" class="navbar-brand navbar-left text-white align-items-center"  data-toggle="collapse" data-target=".navbar-collapse.show">
          <img src="{% static 'images/sc-logos/sc_icon_white_green_small.png' %}"> <span class="d-none d-xl-inline d-lg-inline d-md-inline">San Cristobal Coffee Importers</span>
@@ -116,6 +120,29 @@
           </div>
         </div>
     </footer>
+
+    {% if banner.is_live %}
+    <!-- Banner Modal -->
+    <div class="modal fade" id="bannerModal" tabindex="-1" role="dialog" aria-labelledby="bannerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header sc-blue-bg align-items-center">
+            <img class="px-2" style="width:75px; height:auto;" src="{% static 'images/sc-logos/sc_icon_white_green_small.png' %}"> 
+            <h5 class="modal-title text-white" id="bannerModalLabel">{{banner.page_title}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span style="color:white" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{ banner.content | safe }}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </body>
   <script>
     AOS.init();
