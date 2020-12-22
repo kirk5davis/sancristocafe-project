@@ -71,12 +71,12 @@
       <div class="container">
         <div data-aos="zoom-in" data-aos-duration="1000" class="row py-4">
           <div class="col-lg-12 text-center align-items-center pt-4" style="height:50%;" >
-              <h2 class="dark-text font-weight-bold"> Track the origin of our coffees using our traceability tool: <br> </h2>
+              <h2 class="dark-text font-weight-bold"> Trace your bag of coffee back to origin: <a class="black-outline" href="http://trackyourcoffee.com/">TrackYourCoffee.com</a><br> </h2>
                 <div class="form-group">
-              <input class="form-control" type="text" id="coffee_id" />
+              <input class="form-control" type="text" id="coffee_id" type="text" required/>
               <a class="form-control btn btn-primary my-2" href="http://trackyourcoffee.com/tracker?entry=" target="_blank" onclick="window.open($(this).attr('href')+$('#coffee_id').val()); return false;">Look up bag tag</a>      
             </div>
-              <p class="font-weight-bold sc-brown" >Type in a bag tag # above or click a sample bag tag # below to see how we define traceability:</p>
+              <p class="font-weight-bold sc-brown" >Enter the unique serial number on your bag tag or click a sample bag tag below to see how we define traceability: </p>
               <div class="dropdown">
                   <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span><img src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}" style="height: 20px;width: auto"> </span>Example bag tags
