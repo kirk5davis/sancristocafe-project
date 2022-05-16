@@ -13,7 +13,10 @@ def emailView(request):
         form_anchor = ''
         message = 'blank'
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        data = request.POST.copy()
+        if 'h-captcha-response' in data:
+            data['captcha'] = data['h-captcha-response']
+        form = ContactForm(data)
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']

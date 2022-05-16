@@ -113,6 +113,10 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, barbaCon
 
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container){
   AOS.init();
+  hcaptcha.render('h-captcha', {
+    sitekey: '16240954-61df-4573-b206-ee348961766c',
+    theme: 'light',
+  });
 });
 
 });

@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 
+
 {% block content %}
 <div class="container-fluid sc-gold-bg py-1 mb-3">
 		<p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> Contact Info</p>
@@ -96,9 +97,10 @@
 									<button type="button" class="close" data-dismiss="alert">&times;</button>
 							</div>
 							{% endif %}
-							<div class="col-sm-6">
+							{% comment %} <div class="col-sm-6">
 									{{ form.are_you_a_human|as_crispy_field }}
-							</div>
+							</div> {% endcomment %}
+							<div id="h-captcha" class="col-sm-6 h-captcha" data-sitekey='16240954-61df-4573-b206-ee348961766c'></div>
 						</div>
 						
 						<p class="text-muted small">note: we do not sell, send spam, or collect your personal information for any other reason than getting and staying in-touch with you!</p>			
@@ -130,4 +132,25 @@
 	});
 </script>
 {% endif %}
+
+{% if message == 'failed' %}
+<script type="text/javascript">
+$(document).ready(function(){
+  hcaptcha.render('h-captcha', {
+    sitekey: '16240954-61df-4573-b206-ee348961766c',
+    theme: 'light',
+  });
+});
+</script>
+{% endif %}
+<!-- hcaptcha -->
+<script src="https://js.hcaptcha.com/1/api.js?render=explicit" async defer></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  hcaptcha.render('h-captcha', {
+    sitekey: '16240954-61df-4573-b206-ee348961766c',
+    theme: 'light',
+  });
+});
+</script>
 {% endblock %}
