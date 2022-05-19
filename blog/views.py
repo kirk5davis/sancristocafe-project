@@ -6,9 +6,18 @@ from .models import ArchivedFile
 from .models import Newsletter
 
 # Create your views here.
-def blogs(request):
+def news(request):
+	blog = Blog.objects.all().order_by('-created_on')[0]
+	latest_newsletter = Newsletter.objects.all().order_by('-vintage')[0]
+	return render(request, 'blog/news.html', {"blog":blog, "newsletter":latest_newsletter})
+
+def blog(request):
 	blogs = Blog.objects.all().order_by('-created_on')
-	return render(request, 'blog/blogs.html', {"blogs":blogs})
+	return render(request, 'blog/blog.html', {"blogs":blogs})
+
+def newsletter(request):
+	latest_newsletter = Newsletter.objects.all().order_by('-vintage')[0]
+	return render(request, 'blog/newsletter.html', {"newsletter":latest_newsletter})
 
 def post_details(request, blog_id):
 	post_detail = get_object_or_404(Blog, pk=blog_id)

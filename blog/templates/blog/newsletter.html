@@ -1,0 +1,39 @@
+{% extends 'coffee/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container-fluid sc-gold-bg py-1 mb-2">
+    <p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}"
+            class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a> <img
+            src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> <a href="{% url 'news' %}"
+            class="sc-blue font-weight-bold">News</a> <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}"
+            class="breadcrumb-bean" />Newsletter</p>
+</div>
+<div class="container">
+    <div class="row" id='current-newsletter'>
+        <div class="col-lg-12 text-center pt-3">
+            <h2 class="sc-brown text-center font-weight-bold">Check out our latest newsletter from GTNay</h2>
+        </div>
+        <hr />
+        <div class="col-lg-12">
+            <p>{{ newsletter.title }}: <small class="text-muted">{{ newsletter.brief_summary }}</small></p>
+        </div>
+        <div class="col-lg-12" id="pdf_area" style="height:100vh;">
+            <table style="z-index:0;">
+                <iframe src="{{ newsletter.file.url }}" width="100%" height="100%"></iframe>
+            </table>
+        </div>
+        <div class="col-lg-12 text-center">
+            <small>Can't see the Newsletter? Are you using Internet Explorer? If so, install <a
+                    href='https://get.adobe.com/reader/'>Adobe Reader</a> or download the latest newletter <a
+                    href="{{ newsletter.file.url }}" target="_blank">here!</a></small>
+        </div>
+    </div>
+    <br>
+    <div class="btn-group d-flex" role="group">
+        <a href="{% url 'archives' %}" class="btn btn-primary w-100">View past newsletters and docs</a>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}

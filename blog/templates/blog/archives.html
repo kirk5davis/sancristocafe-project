@@ -4,7 +4,9 @@
 {% block content %}
 <div style="background-image: linear-gradient(to bottom,rgba(244, 244, 244, 0.75) 0%,rgba(244, 244, 244, 0.75) 100%), url('/static/images/archives.png');">
 <div class="container-fluid sc-gold-bg py-1">
-    <p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> Archives</p>
+    <p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> <a href="{% url 'news' %}"
+      class="sc-blue font-weight-bold">News</a> <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}"
+      class="breadcrumb-bean" />Archives</p>
 </div>
 <div class="container">
     <div class="row">
