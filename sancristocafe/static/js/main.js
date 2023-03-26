@@ -126,3 +126,10 @@ Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, co
 $(window).on('resize',function(){
 	$('.header-of-site').height($(window).height())
 });
+
+$(function() {
+  $('.btn-group-fab').on('click', '.btn', function() {
+    $('.btn-group-fab').toggleClass('active');
+  });
+  $('has-tooltip').tooltip();
+});

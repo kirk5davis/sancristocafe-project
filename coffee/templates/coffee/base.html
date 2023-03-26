@@ -19,7 +19,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <!-- Font style for this website -->
-      <link href="https://fonts.googleapis.com/css?family=Merriweather%7CMuli" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Merriweather%7CMulish" rel="stylesheet">
 
       <!-- Swiper Style Sheet -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
@@ -28,7 +28,7 @@
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
       <!-- Custom style sheets -->
-      <link rel="stylesheet" type="text/css" href='/static/css/main.css?v=0.1.3'>
+      <link rel="stylesheet" type="text/css" href='/static/css/main.css?v=0.1.4'>
             
       <!-- Swiper Javascript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
@@ -47,28 +47,14 @@
       <!-- instagram feed tool (needs to be replaced eventually)-->
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 
+      <!-- hcaptcha -->
       <script src="https://js.hcaptcha.com/1/api.js?render=explicit" async defer></script>
 
       <!-- Custom JS -->
-      <script type="text/javascript" src='/static/js/main.js?version=0.0.6'></script>
+      <script type="text/javascript" src='/static/js/main.js?version=0.1.0'></script>
 
       <!-- favicon -->
       <link rel="shortcut icon" href="{% static 'images/icons/favicon.ico'%}" type="image/ico" />
-
-
-      <!--Start of Tawk.to Script-->
-      <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5cf40096b534676f32ad01bf/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
-        <!--End of Tawk.to Script-->
 
   </head>
 
@@ -121,17 +107,49 @@
           <div class="row row-no-margins sc-red-bg">
               <p></p>
             </div>
-        <div class="row row-no-margins align-items-center pt-2 pb-4 sc-blue-bg">
-            <div class="col-md-2"></div>
-          <div class="col-md-2">
-            <img class="footer-img" src="{% static 'images/sc-logos/sc_icon_white_green_small.png' %}">
-          </div>
-          <div class="col-md-8 d-inline-block">
-              <small><p class="text-white">&#9400; San Cristobal Coffee Importers {% now "Y" %}<br>
-                <strong>   13244 Juanita Drive NE Kirkland, Washington 98034</strong></small></p>
-              <a href="https://www.instagram.com/sancristocafe" target="_blank"><img class="footer-img" src="{% static 'images/icons/instagram_logo_grey.png' %}"></a>
+        <div class="row row-no-margins align-items-top pt-2 pb-4 sc-blue-bg">
+          <div class="col-md-2"></div>
+          <div class="col-md-3 d-inline-block pt-2">
+            <img class="footer-img pb-2" src="{% static 'images/sc-logos/sc_icon_white_green_small.png' %}"><br>
+            <h4 class="text-white">US Office:</h4>
+            <p class="text-white">
               
+                <strong> 13244 Juanita Drive NE 
+                  <br>Kirkland, WA 98034 USA
+                </strong>
+                  <br>+1 425 825 9106
+                  <br>info@sancristocafe.com
+          </p>
+            <a href="https://www.instagram.com/sancristocafe" target="_blank"><img class="footer-img"
+                src="{% static 'images/icons/instagram_logo_grey.png' %}"></a>
           </div>
+          <div class="col-md-3 d-inline-block pt-2">
+            <img class="footer-img pb-2" src="{% static 'images/other-logos/cafe_sumex.png' %}"><br>
+            <h4 class="text-white">Mexico Office:</h4>
+            <p class="text-white">
+              
+                <strong> Calle Nayarit 290, Col. Morelos, 
+                  <br>Tepic, Nayarit, Mexico C.P. 63160
+                </strong>
+                  <br>+52 311 210 3599
+                  <br>atencion@cafesumex.com
+          </p>
+            <a href="https://www.instagram.com/cafesumex" target="_blank"><img class="footer-img"
+                src="{% static 'images/icons/instagram_logo_grey.png' %}"></a>
+          </div>
+          <div class="col-md-3 d-inline-block pt-2">
+            <img class="footer-img pb-2" src="{% static 'images/sc-logos/sc_icon_white_green_small.png' %}"><br>
+            <h4 class="text-white">Technical Services:</h4>
+            <p class="text-white">
+              
+                <strong> info@fincalab.com
+                  <br>Spanish or English
+                </strong>
+          </p>
+            <!-- <a href="https://www.instagram.com/sancristocafe" target="_blank"><img class="footer-img"
+                src="{% static 'images/icons/instagram_logo_grey.png' %}"></a> -->
+          </div>
+          <div class="col-md-2"></div>
         </div>
     </footer>
 
@@ -157,6 +175,14 @@
       </div>
     </div>
     {% endif %}
+    <div class="btn-group-fab" role="group" aria-label="Contact Us FAB Menu">
+      <div>
+        <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Contact us!"> <i class="fa fa-comment"></i> </button>
+        <a href="{% url 'contact' %}" type="button" class="btn btn-sub sc-blue-bg has-tooltip" data-placement="left" title="Visit our contact page!"> <i class="fa fa-envelope"></i> </a>
+        <a href="tel:+14258259106" type="button" class="btn btn-sub sc-blue-bg has-tooltip" data-placement="left" title="Give us a phone call."> <i class="fa fa-phone"></i> </a>
+        <a href="https://www.instagram.com/sancristocafe/" type="button" class="btn btn-sub sc-blue-bg has-tooltip" data-placement="left" title="Find us on Instagram!" target="_blank"> <i class="fa fa-instagram"></i> </a>
+      </div>
+    </div>
   </body>
   <script>
     AOS.init();

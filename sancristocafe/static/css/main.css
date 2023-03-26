@@ -32,7 +32,7 @@ p {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Mulish', sans-serif;
   display: block;
   flex-direction: column;
   position: relative;
@@ -52,6 +52,50 @@ body {
 /*Ie 10/11*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .footer{bottom:auto;}
+}
+
+.btn-group-fab {
+  position: fixed;
+  width: 50px;
+  height: auto;
+  right: 20px; bottom: 20px;
+}
+.btn-group-fab div {
+  position: relative; width: 100%;
+  height: auto;
+}
+.btn-group-fab .btn {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 4px;
+  width: 40px; height: 40px;
+  margin: 4px auto;
+}
+.btn-group-fab .btn-main {
+  width: 50px; height: 50px;
+  right: 50%; margin-right: -25px;
+  z-index: 9;
+}
+.btn-group-fab .btn-sub {
+  bottom: 0; z-index: 8;
+  right: 50%;
+  margin-right: -20px;
+  -webkit-transition: all 2s;
+  transition: all 0.5s;
+}
+.btn-group-fab.active .btn-sub:nth-child(2) {
+  bottom: 60px;
+}
+.btn-group-fab.active .btn-sub:nth-child(3) {
+  bottom: 110px;
+}
+.btn-group-fab.active .btn-sub:nth-child(4) {
+  bottom: 160px;
+}
+.btn-group-fab .btn-sub:nth-child(5) {
+  bottom: 210px;
 }
 
 #blog-text img{
@@ -105,15 +149,15 @@ h2, h3, h4, h5{
 }
 
 .open-sans-text{
-  font-family: 'Muli', sans-serif !important;
+  font-family: 'Mulish', sans-serif !important;
 }
 
 font{
-  font-family: 'Muli', sans-serif !important;
+  font-family: 'Mulish', sans-serif !important;
 }
 
 font, span{
-  font-family: 'Muli', sans-serif !important;
+  font-family: 'Mulish', sans-serif !important;
 }
 
 a{

@@ -10,41 +10,27 @@
 <div class="container">
 
 	<div class="row align-items-center">
-	<div class="col-sm-12 text-center">
-					<h4 class="sc-red my-4">
-					Download our latest coffee offering list:<br>
-					<a href="{{ offering_list.pdf_file.url }}" target="_blank" class="btn btn-primary btn-lg my-2"><span><img src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}" style="height: 20px;width: auto"> </span>Offer List</a><br>
-					<small>Current as of: <strong class="sc-gold">{{offering_list.date_current}}</strong></small>
-					</h4>
-					</div>
 		<div class="col-sm-12 text-center">
-				<h2 class="sc-brown font-weight-bold">- Select Microlot Offerings -</h2>
-			</div>
+			<h3 class="sc-red my-4">
+				Download our latest coffee offering list:<br>
+				<a href="{{ offering_list.pdf_file.url }}" target="_blank"
+					class="btn btn-primary btn-lg my-2"><span><img
+							src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}"
+							style="height: 20px;width: auto"> </span>Offer List</a><br>
+				<small>Current as of: <strong class="sc-gold">{{offering_list.date_current}}</strong></small>
+			</h3>
+		</div>
 	</div>
-	
+
 	<div class="row">
-			
-			{% for coffee_group in coffees %}
-				{% for coffee in coffee_group%}
-			<div class="col-sm-6 py-2">
-				<div class="square align-items-center shadow-lg" style="background-image:url('{{ coffee.image.url }}');">
-						<div class="image-overlay text-center open-sans-text">
-								{{coffee.description | safe}}
-								<a class="btn btn-primary btn-sm my-2" href="http://trackyourcoffee.com/tracker?entry={{ coffee.bag_tag }}" target="_blank">Learn more about this coffee</a>
-							</div>
-				</div>
-				
-			</div>
-				{% endfor %}
-			{% endfor %}
+		<div class="col-sm-12 text-center">
+			<h3>
+			<a href="{% url 'contact' %}" class="btn btn-primary btn-sm mt-3"><span><i class="fa fa-paper-plane"></i></span> Contact us to
+				place an order!</a><br>
+		</h3>
 		</div>
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<a href="{{ offering_list.pdf_file.url }}" target="_blank" class="btn btn-primary btn-lg mt-3"><span><img src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}" style="height: 20px;width: auto"> </span>Offer List</a><br>
-				<small class="pt-0">Current as of: <strong class="sc-red">{{offering_list.date_current}}</strong></small>
-			</div>
-		</div>
-		</div>
+	</div>
+</div>
 
 <div class="row row-no-margins sc-brown-bg align-items-center py-4 my-4">
 			<div data-aos="fade-down" data-aos-duration="1000" class="col-md-4 text-center">
