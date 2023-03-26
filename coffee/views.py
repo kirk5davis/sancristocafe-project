@@ -22,5 +22,11 @@ def source_work(request):
 	latest_newsletter = Newsletter.objects.all().order_by('-vintage')[0]
 	return render(request, 'coffee/source_work.html', {"newsletter":latest_newsletter})
 
+def source_ethiopia(request):
+	return render(request, 'coffee/source_ethiopia.html')
+
+def source_mexico(request):
+	return render(request, 'coffee/source_mexico.html')
+
 def traceability(request):
 	return render(request, 'coffee/traceability.html')
