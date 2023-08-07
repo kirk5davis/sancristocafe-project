@@ -23,7 +23,8 @@ def source_work(request):
 	return render(request, 'coffee/source_work.html', {"newsletter":latest_newsletter})
 
 def source_ethiopia(request):
-	return render(request, 'coffee/source_ethiopia.html')
+	current_offering_list = OfferingsList.objects.all().order_by('-date_current')[0]
+	return render(request, 'coffee/source_ethiopia.html', {"offering_list": current_offering_list})
 
 def source_mexico(request):
 	return render(request, 'coffee/source_mexico.html')
