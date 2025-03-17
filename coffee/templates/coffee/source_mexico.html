@@ -112,6 +112,17 @@ coffee quality and consistency, growing away from the commodity market and into 
     </div>
     
 </div>
+<div class="row align-items-center">
+    <div class="col-sm-12 text-center">
+        <h3 class="sc-red my-4">
+            <a href="{{ offering_list.pdf_file.url }}" target="_blank"
+                class="btn btn-primary btn-lg my-2"><span><img
+                        src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}"
+                        style="height: 20px;width: auto"> </span>Offer List</a><br>
+            <small>Current as of: <strong class="sc-gold">{{offering_list.date_current}}</strong></small>
+        </h3>
+    </div>
+</div>
 </div>
 <script>
     // map configuration

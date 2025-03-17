@@ -1,0 +1,185 @@
+{% extends 'coffee/base.html' %}
+{% load staticfiles %}
+
+{% block extra-head %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid sc-gold-bg py-1 mb-3">
+    <p class="small my-1 sc-blue font-weight-bold"><img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /><a href="{% url 'home' %}" class="sc-blue font-weight-bold">Home</a>  <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> <a href="{% url 'source-work' %}" class="sc-blue font-weight-bold"> Source Work </a> <img src="{% static 'images/sc-logos/sc_icon_leaf.png' %}" class="breadcrumb-bean" /> Peru </p>
+</div>
+
+<div class="container pb-2">
+    <div class="row py-4 align-items-center">
+        
+        <div class="col-lg-8">
+            <h2 class="lead font-weight-bold">In 2024, San Cristobal Expanded Its Fincalab® QMS  To Peru After Another Transformative Internship…</h2>
+            <p>SCM and CSM are partnering with Cooperativa Agraria Groupthink Yapaz (COOPAGRY) in Peru to implement the FincaLab® Coffee Quality Management system. This proven science-based approach, developed with GTNay in Mexico, will help COOPAGRY improve quality, efficiency, and exports—empowering its farmers to thrive in the global coffee market!
+            </p>
+            <p class="font-weight-bold">COOPAGRY is based in the town of Yapaz Bajo, which is located in Peru's central jungle in the region of Junín. 
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <figure class="figure w-100">
+            <div id="map-peru" style="height:300px;"></div>
+            <figcaption class="figure-caption pb-0"><small>Map showing the Junín Region boundary in Peru.</small></figcaption>	
+        </figure>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9">
+            <img src="{% static 'images/source_work_peru_palomar.jpg' %}" class="img-fluid rounded">
+        </div>
+        <div class="col-lg-3">
+            <p>
+                <b>Yapaz Bajo</b>, which is situated at about 1,400 meters, is one of dozens of small coffee-growing towns
+                in an area of approximately 6,000 households known locally “El Valle Palomar” (The Palomar Valley). The
+                Peruvian government has declared the area a Parque Nacional de Café (Coffee National Park), due to its
+                natural beauty and the importance of its coffee economy.
+            </p>
+        </div>
+    </div>
+    <div class="row py-4">
+    <div class="col-lg-5 text-center">
+        <img src="{% static 'images/source_work_peru_yapaz_logo.jpg' %}" class="img-fluid rounded py-4 w-50">
+        <figure>
+        <img src="{% static 'images/source_work_peru_vivanco.jpg' %}" class="img-fluid rounded">
+        <small>
+            <figcaption class="figure-caption">The Vivanco Family - Alex, Flor, Jean Pierre with Uncle David</figcaption>
+        </small>
+        </figure>
+    </div>
+    <div class="col-lg-7 my-auto">
+        <h2 class="font-weight-bold">
+            The Story of COOPAGRY
+        </h2>
+        <p>
+            COOPAGRY was born from the vision of the Vivanco family, who are third-generation coffee farmers. Despite El Valle Palomar’s reputation for producing lots of coffee, small producers have long struggled with economic inequality. Middlemen dominate the market, purchasing coffee cherries or parchment at low prices and selling them to large cooperatives or exporters who export the coffee at significant profits. For small farmers, these export-driven profits are essentially out of reach.
+        </p>
+        <p>
+            For the Vivanco family, this imbalance was especially evident when an investor established a large 70-hectare, full sun, coffee farm and set-up a sophisticated wet mill just down the road from their home in Yapaz Bajo. While the investor’s company employed locals, including members of the Vivanco family, to manage operations and perform quality control, the family realized they had no direct market access for their own coffee and the organization's profits we not being passed down to them. 
+        </p>
+        <p class="font-weight-bold">
+            In 2021, three young members of the Vivanco family—Alex, Flor, and Jean Pierre—along with their uncle David, met up at a café in the nearby city of Villa Rica. Over the course of their conversation that day, they sketched out a long-term vision: establish their own family exporting organization. They called it COOPAGRY (Cooperativa Agraria Group Think Yapaz). Two years later, on April 15th 2023, their cooperative was officially established.
+        </p>
+    </div>
+    </div>
+    <div class="row py-4">
+        <div class="col-lg-5 my-auto">
+            <h2 class="font-weight-bold">
+                COOPAGRY Trained In Mexico
+            </h2>
+            <p>
+                In early 2024, Alex and Flor (brother and sister) traveled to Mexico to intern with CSM  (www.cafesumex.com) in Tepic, Nayarit, Mexico.  It was an eye opening and transformative experience for them both. During their four-month internship, they studied coffee quality management, the formal evaluation of daily lots, producing organization management, international trade, and economies of scale. They also collaborated with CSM’s engineers to adapt our FincaLab® software for quality management in Peru. This internship, sponsored by San Cristobal Coffee Importers, equipped Alex and Flor with the skills and tools necessary to bring their vision for COOPAGRY to life.
+            </p>
+        </div>
+        <div class="col-lg-7">
+            <figure>
+            <img src="{% static 'images/source_work_peru_internship.jpg' %}" class="img-fluid rounded">
+            <small>
+                <figcaption class="figure-caption">Alex and Flor at their internship graduation in Nayarit, pictured with their mentor, Carlos Bustamante—CSM's Head of Ops and one of Mexico’s most accomplished cuppers.                </figcaption>
+            </small>
+            </figure>
+        </div>
+    </div>
+    <div class="row py-4">
+        <div class="col-lg-12">
+            <figure>
+            <img src="{% static 'images/source_work_peru_collaboration.jpg' %}" class="img-fluid rounded">
+            <figcaption class="figcaption font-weight-bold text-center">Jacob Frankel of San Cristobal (USA) and Marcela Ladrón de Guevara of CAFESUMEX (Mexico) stand with the De La Cruz family from Raimondi, Ucayali—representing a local coffee producer network who collaborates with COOPAGY.</p>
+        </figure>
+        </div>
+    </div>
+    <div class="row py-4">
+        <div class="col-md-6">
+            <figure>
+                <img src="{% static 'images/source_work_peru_export_lima.jpg' %}" class="img-fluid rounded">
+                <small>
+                    <figcaption class="figure-caption text-center">Alex and David Vivanco see off their coffee export at the Port in Lima
+                    </figcaption>
+                </small>
+                </figure>
+        </div>
+        <div class="col-md-6">
+            <figure>
+                <img src="{% static 'images/source_work_peru_coopagry_import.jpg' %}" class="img-fluid rounded">
+                <small>
+                    <figcaption class="figure-caption text-center">San Cristobal GM, Kenny Davis, welcomes the first ever COOPAGRY container coffee at Costa Oro Seattle warehouse in late 2024.
+                    </figcaption>
+                </small>
+                </figure>
+        </div>
+    </div>
+    <div class="row pt-2">
+    <div class="col-lg-12">
+            <h2 class="sc-brown py-2 text-center font-weight-bold">Model for Growth</h2>
+        <p>
+            COOPAGRY's first successful export in 2024 boosted the income of all participating families and laid the foundation for growth in future harvests. The Vivanco family is presently investing their income in the construction of a centralized wet mill to increase efficiency, as well as a permanent cupping lab. 
+
+        </p>
+        <p>
+            San Cristobal is the official North American distributor of COOPAGRY’s Peruvian coffees, with FincaLab® harvest support administered remotely by our Mexican staff at CAFESUMEX. The 2024 crop’s interesting traceability data is highlighted on our TrackYourCoffee website: 
+        </p>
+    </div>
+    </div>
+    <div class="row py-4 text-center">
+        <div class="col-lg-6">
+            <a class="btn btn-primary my-2" href="https://trackyourcoffee.com/tracker?entry=CGY0101000" target="_blank"><i class="fa fa-link"></i> https://trackyourcoffee.com/tracker?entry=CGY0101000 </a>
+        </div>
+        <div class="col-lg-6">
+            <a class="btn btn-primary my-2" href="https://trackyourcoffee.com/cui?code=CGY0103000" target="_blank"><i class="fa fa-link"></i> https://trackyourcoffee.com/cui?code=CGY0103000 </a>
+        </div>
+    </div>
+    <div class="row align-items-center">
+		<div class="col-sm-12 text-center">
+			<h3 class="sc-red my-4">
+				<a href="{{ offering_list.pdf_file.url }}" target="_blank"
+					class="btn btn-primary btn-lg my-2"><span><img
+							src="{% static 'images/sc-logos/sc_icon_white_green_very_small.png' %}"
+							style="height: 20px;width: auto"> </span>Offer List</a><br>
+				<small>Current as of: <strong class="sc-gold">{{offering_list.date_current}}</strong></small>
+			</h3>
+		</div>
+	</div>
+</div>
+    
+</div>
+</div>
+<script>
+    // map configuration
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2lya2RhdmlzIiwiYSI6ImNrZGI0NHQ4OTBhbDgycHQ4bXJnZ3RuaHUifQ.J6lP2Ewp_S9nd6Oo_DoMbw';
+    const map = new mapboxgl.Map({
+      container: 'map-peru', // container ID
+      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+      style: 'mapbox://styles/mapbox/light-v11', // style URL
+      center: [-75.99304, -11.15895], // starting position [lng, lat]
+      zoom: 4, // starting zoom
+      attributionControl: false
+    });
+
+    map.on('load', () => {
+      map.addSource('junin', {
+        type: 'geojson',
+        // Use a URL for the value for the `data` property.
+        data: "{% static 'data/junin.geojson' %}",
+      });
+      map.addLayer({
+        'id': 'junin-layer',
+        'type': 'fill',
+        'source': 'junin',
+        'paint': {
+          'fill-color': '#111111',
+          'fill-opacity': 0.2,
+        }
+      });
+    });
+    map.on('click', 'junin-layer', (e) => {
+      new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(`<h5 class="p-2">${e.features[0].properties.NOMBDEP}, Peru</h5>`)
+        .addTo(map);
+    });
+</script>
+{% endblock %}

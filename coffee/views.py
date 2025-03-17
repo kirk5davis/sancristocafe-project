@@ -29,5 +29,8 @@ def source_ethiopia(request):
 def source_mexico(request):
 	return render(request, 'coffee/source_mexico.html')
 
+def source_peru(request):
+	return render(request, 'coffee/source_peru.html')
+
 def traceability(request):
 	return render(request, 'coffee/traceability.html')

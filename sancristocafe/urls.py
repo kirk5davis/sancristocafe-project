@@ -20,6 +20,7 @@ urlpatterns = [
     path('source-work/', coffee.views.source_work, name='source-work'),
     path('source-work/mexico', coffee.views.source_mexico, name="mexico"),
     path('source-work/ethiopia', coffee.views.source_ethiopia, name="ethiopia"),
+    path('source-work/peru', coffee.views.source_peru, name="peru"),
     path('traceability/', coffee.views.traceability, name='traceability'),
     path('news/', include('blog.urls'), name='news'),
     path('contact/', include('contact.urls'), name='contact'),
