@@ -175,7 +175,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2lya2RhdmlzIiwiYSI6ImNrZGI0NHQ4OTBhbDgycHQ4b
     map.on('click', 'junin-layer', (e) => {
       new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML(`<h5 class="p-2">${e.features[0].properties.NOMBDEP}, Peru</h5>`)
+        .setHTML(`<h5 class="p-2">${e.features[0].properties.NOMBDEP} Region, Peru</h5>`)
         .addTo(map);
     });
 </script>
