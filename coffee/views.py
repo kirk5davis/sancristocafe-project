@@ -27,10 +27,12 @@ def source_ethiopia(request):
 	return render(request, 'coffee/source_ethiopia.html', {"offering_list": current_offering_list})
 
 def source_mexico(request):
-	return render(request, 'coffee/source_mexico.html')
+	current_offering_list = OfferingsList.objects.all().order_by('-date_current')[0]
+	return render(request, 'coffee/source_mexico.html', {"offering_list": current_offering_list})
 
 def source_peru(request):
-	return render(request, 'coffee/source_peru.html')
+	current_offering_list = OfferingsList.objects.all().order_by('-date_current')[0]
+	return render(request, 'coffee/source_peru.html', {"offering_list": current_offering_list})
 
 def traceability(request):
 	return render(request, 'coffee/traceability.html')
